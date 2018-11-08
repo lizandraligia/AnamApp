@@ -2,9 +2,14 @@
     <string name="app_name">AnamApp</string>
 
 
-    <string name="login_string">Login</string>
-    <string name="password_string">Password</string>
-    <string name="enter_string">Enter</string>
-    <string name="sign_up_invite">There is no account? sign up</string>
+    <string name="login_hint_login">Login</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_button_enter">Enter</string>
+    <string name="login_text_field_sign_up_invite">Don\'t have an account? sign up</string>
+
+
+    <string name="main_menu_button_registrate_patient">Registrate Patient</string>
+    <string name="main_menu_button_search_patient">Search Patient</string>
+
 
 </resources>
