@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnamApp</string>
+    <string name="login_string">Login</string>
+    <string name="password_string">Senha</string>
+    <string name="enter_string">Entrar</string>
+    <string name="sign_up_invite">Não tem conta? cadastre-se</string>
+</resources>

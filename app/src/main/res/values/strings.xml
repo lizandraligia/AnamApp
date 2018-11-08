@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AnamApp</string>
+
+
+    <string name="login_string">Login</string>
+    <string name="password_string">Password</string>
+    <string name="enter_string">Enter</string>
+    <string name="sign_up_invite">There is no account? sign up</string>
+
+</resources>
