@@ -2,8 +2,8 @@
     <string name="app_name">AnamApp</string>
 
 
-    <string name="login_hint_login">Login</string>
-    <string name="login_hint_password">Password</string>
+    <string name="login_hint_login">" Login"</string>
+    <string name="login_hint_password">" Password"</string>
     <string name="login_button_enter">Enter</string>
     <string name="login_text_field_sign_up_invite">Don\'t have an account? sign up</string>
 

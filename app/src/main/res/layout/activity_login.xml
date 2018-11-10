@@ -53,7 +53,7 @@
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/login_edit_text_login"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/login_edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
@@ -79,10 +79,10 @@
         android:textColorHint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/login_edit_text_login" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login_button_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -92,7 +92,7 @@
         android:text="@string/login_button_enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password" />
 
     <TextView
         android:id="@+id/text_field_sign_up"

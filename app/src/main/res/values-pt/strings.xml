@@ -6,9 +6,10 @@
     <string name="login_text_field_login">Login</string>
     <string name="login_text_field_sign_up_invite">Não tem conta? cadastre-se</string>
     <string name="login_button_enter">Entrar</string>
-    <string name="login_hint_password">Senha</string>
+    <string name="login_hint_password">" Senha"</string>
 
 
     <string name="main_menu_button_registrate_patient">Registrar Paciente</string>
     <string name="main_menu_button_search_patient">Buscar Paciente</string>
+    <string name="login_hint_login">" Login"</string>
 </resources>
