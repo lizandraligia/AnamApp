@@ -12,4 +12,7 @@
     <string name="main_menu_button_registrate_patient">Registrar Paciente</string>
     <string name="main_menu_button_search_patient">Buscar Paciente</string>
     <string name="login_hint_login">" Login"</string>
+    <string name="search_patient_text_field_search_patient">Buscar Paciente</string>
+    <string name="search_patient_hint_patient_number">" nº paciente"</string>
+    <string name="search_patient_button_search">Buscar</string>
 </resources>

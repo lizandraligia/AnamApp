@@ -12,4 +12,9 @@
     <string name="main_menu_button_search_patient">Search Patient</string>
 
 
+    <string name="search_patient_text_field_search_patient">Search Patient</string>
+    <string name="search_patient_hint_patient_number">" nº patient"</string>
+    <string name="search_patient_button_search">Search</string>
+
+
 </resources>
