@@ -12,7 +12,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         login_button_enter.setOnClickListener {
-            val intent = Intent(applicationContext, SearchPatientActivity::class.java)
+            val intent = Intent(applicationContext, MenuActivity::class.java)
             startActivity(intent)
         }
     }
