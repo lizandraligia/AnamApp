@@ -1,57 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             android:background="@color/colorPrimary">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/colorPrimary">
 
-    <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" app:srcCompat="@mipmap/logo"
-            android:id="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="80dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.018"/>
+    <ImageView android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintDimensionRatio="2:1" app:srcCompat="@drawable/logo" android:id="@+id/imageView" app:layout_constraintEnd_toEndOf="@+id/btnRegPaciente" app:layout_constraintStart_toStartOf="@+id/btnRegPaciente" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"/>
 
-    <Button
-            android:id="@+id/btnRegPaciente"
-            android:layout_width="260dp"
-            android:layout_height="125dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="56dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/main_menu_button_registrate_patient"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-    />
+    <Button android:id="@+id/btnRegPaciente" android:layout_width="260dp" android:layout_height="125dp" android:text="@string/main_menu_button_registrate_patient" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.20999998"/>
 
-    <Button
-            android:id="@+id/btnBuscarPaciente"
-            android:layout_width="260dp"
-            android:layout_height="125dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/main_menu_button_search_patient"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.917"/>
+    <Button android:id="@+id/btnBuscarPaciente" android:layout_width="260dp" android:layout_height="125dp" android:text="@string/main_menu_button_search_patient" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btnRegPaciente" android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <ImageView
-            android:layout_width="33dp"
-            android:layout_height="31dp" app:srcCompat="?attr/actionModeCloseDrawable"
-            android:id="@+id/menu_image_view_back" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
+    <ImageView android:layout_width="33dp" android:layout_height="31dp" app:srcCompat="?attr/actionModeCloseDrawable" android:id="@+id/menu_image_view_back" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
 
 </android.support.constraint.ConstraintLayout>
