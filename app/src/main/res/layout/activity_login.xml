@@ -21,7 +21,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" android:scaleType="fitCenter"/>
+            app:srcCompat="@drawable/logo" android:scaleType="fitCenter" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"/>
 
     <ImageView
             android:id="@+id/imageView3"
@@ -67,34 +68,35 @@
         app:layout_constraintTop_toBottomOf="@+id/login_edit_text_login" />
 
     <Button
-        android:id="@+id/login_button_enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/login_button_enter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password" />
+            android:id="@+id/login_button_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/login_button_enter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password"
+            app:layout_constraintBottom_toTopOf="@+id/text_field_sign_up" android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/text_field_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:gravity="bottom"
-        android:text="@string/login_text_field_sign_up_invite"
-        android:textColor="@color/white"
-        android:textIsSelectable="true"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/text_field_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="bottom"
+            android:text="@string/login_text_field_sign_up_invite"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.418"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/login_button_enter"/>
 
 
 </android.support.constraint.ConstraintLayout>
