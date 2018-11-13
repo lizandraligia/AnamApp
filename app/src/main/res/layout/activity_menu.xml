@@ -7,7 +7,7 @@
 
     <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/logo"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/logo"
             android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="80dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"

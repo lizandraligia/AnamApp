@@ -21,7 +21,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" android:scaleType="fitCenter" android:layout_marginBottom="8dp"
+            app:srcCompat="@mipmap/logo" android:scaleType="fitCenter" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView3"/>
 
     <ImageView
@@ -36,7 +36,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:srcCompat="@drawable/avatar" android:scaleType="fitCenter"/>
+            app:srcCompat="@mipmap/avatar" android:scaleType="fitCenter"/>
 
     <EditText
         android:id="@+id/login_edit_text_login"
