@@ -23,7 +23,10 @@
         <activity android:name=".SymptomsMenuActivity"/>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".ListNursesActivity"/>
-        <activity android:name=".registerNewEmployeeActivity">
+        <activity android:name=".registerNewEmployeeActivity"/>
+        <activity android:name=".CheckList"/>
+        <activity android:name=".PatientActivity"/>
+        <activity android:name=".HospitalProfile">
         </activity>
     </application>
 

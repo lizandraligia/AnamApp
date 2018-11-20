@@ -117,79 +117,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2"
                 app:layout_constraintVertical_bias="0.172" />
-
-            <TextView
-                android:id="@+id/tvNurse"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/register_nurse"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/tfCoren"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/white"
-                android:hint="@string/coren"
-                android:inputType="number"
-                android:textColorHint="@color/colorPrimary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                app:layout_constraintVertical_bias="0.172" />
-
-            <EditText
-                android:id="@+id/tfLogin"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/white"
-                android:hint="@string/login_hint_login"
-                android:inputType="text"
-                android:textColorHint="@color/colorPrimary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                app:layout_constraintVertical_bias="0.172" />
-
-            <EditText
-                android:id="@+id/tfPassword"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/white"
-                android:hint="@string/login_hint_password"
-                android:inputType="textPassword"
-                android:textColorHint="@color/colorPrimary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                app:layout_constraintVertical_bias="0.172" />
-
             <Button
-                    android:id="@+id/button"
+                    android:text="@string/btn_create_account"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_create_account" style="@style/Widget.AppCompat.Button.Colored"
-                    android:backgroundTint="@color/black" android:textSize="14sp"/>
+                    android:layout_height="wrap_content" android:id="@+id/button2"/>
 
         </LinearLayout>
     </ScrollView>
