@@ -17,6 +17,10 @@
     <string name="symptons_check_list_title">Check List</string>
 
 
+    <string name="btn_register_new_nurses">CADASTRAR NOVO FUNCIONÁRIO</string>
+    <string name="tv_employee_list">Lista de Funcionários</string>
+
+
     <string name="finish_symptoms_button">FINALIZAR SINTOMAS</string>
     <string name="general_symptoms_button">SINTOMAS GERAIS</string>
     <string name="head_and_neck_symptoms_button">CABEÇA E PESCOÇO</string>
