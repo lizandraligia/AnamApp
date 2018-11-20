@@ -1,11 +1,14 @@
 package anamapp.project
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_listnurses_nurses.*
+import kotlinx.android.synthetic.main.activity_menu.*
 
-class registernursesActivity : Activity() {
+class ListNursesActivity : Activity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
@@ -18,6 +21,16 @@ class registernursesActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listnurses_nurses)
+
+
+        menu_image_view_back2.setOnClickListener {
+            finish()
+        }
+
+        btnRegisterNewNurses.setOnClickListener {
+            val intent = Intent(applicationContext, registerNewEmployeeActivity::class.java)
+            startActivity(intent)
+        }
 
         viewManager = LinearLayoutManager(this)
         viewAdapter = CustomAdapter(this.myDataSet)
@@ -33,5 +46,11 @@ class registernursesActivity : Activity() {
             // specify an viewAdapter (see also next example)
             adapter = viewAdapter
         }
+
+
+
+
     }
+
+
 }

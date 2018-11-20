@@ -3,16 +3,16 @@ package anamapp.project
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_menu.*
-import kotlinx.android.synthetic.main.activity_symptoms_menu.*
+import kotlinx.android.synthetic.main.activity_register_new_employee.*
 
-class SymptomsMenuActivity : AppCompatActivity() {
+class registerNewEmployeeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_symptoms_menu)
+        setContentView(R.layout.activity_register_new_employee)
 
 
-        menu_image_view_back3.setOnClickListener {
+        menu_image_view_back6.setOnClickListener {
             finish()
         }
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="anamapp.project">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="anamapp.project">
 
     <application
             android:allowBackup="true"
@@ -8,7 +9,8 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" tools:ignore="GoogleAppIndexingWarning">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,6 +22,9 @@
         <activity android:name=".MenuActivity"/>
         <activity android:name=".SymptomsMenuActivity"/>
         <activity android:name=".SignUpActivity"/>
+        <activity android:name=".ListNursesActivity"/>
+        <activity android:name=".registerNewEmployeeActivity">
+        </activity>
     </application>
 
 </manifest>
