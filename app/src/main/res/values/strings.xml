@@ -15,7 +15,6 @@
     <string name="search_patient_text_field_search_patient">Search Patient</string>
     <string name="search_patient_hint_patient_number">" nº patient"</string>
     <string name="search_patient_button_search">Search</string>
-    <string name="symptons_check_list_title">Check List</string>
 
 
     <string name="finish_symptoms_button">FINISH SYMPTOMS</string>
@@ -31,12 +30,6 @@
     <string name="locomotor_system_symptoms_button">LOCOMOTOR SYSTEM</string>
     <string name="nervous_system_symptoms_button">NERVOUS SYSTEM</string>
     <string name="psyche_symptoms_button">PSYCHE</string>
-    <string name="num_prontuario">Patient\'s number</string>
-    <string name="patient_name">PATIENT\'S NAME</string>
-    <string name="birthday">Birthday</string>
-    <string name="phone">Phone</string>
-    <string name="symptons">SYMPTONS</string>
-    <string name="age">Age</string>
 
 
 </resources>
