@@ -19,6 +19,7 @@
         <activity android:name=".SearchPatientActivity"/>
         <activity android:name=".MenuActivity"/>
         <activity android:name=".SymptomsMenuActivity"/>
+        <activity android:name=".SignUpActivity"/>
     </application>
 
 </manifest>
