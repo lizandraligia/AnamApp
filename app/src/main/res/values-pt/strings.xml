@@ -14,6 +14,7 @@
     <string name="search_patient_text_field_search_patient">Buscar Paciente</string>
     <string name="search_patient_hint_patient_number">" nº paciente"</string>
     <string name="search_patient_button_search">Buscar</string>
+    <string name="symptons_check_list_title">Check List</string>
 
 
     <string name="finish_symptoms_button">FINALIZAR SINTOMAS</string>
@@ -29,4 +30,10 @@
     <string name="locomotor_system_symptoms_button">SISTEMA LOCOMOTOR</string>
     <string name="nervous_system_symptoms_button">SISTEMA NERVOSO</string>
     <string name="psyche_symptoms_button">PSÍQUICO</string>
+    <string name="num_prontuario">Nº Prontuário</string>
+    <string name="patient_name">NOME DO PACIENTE</string>
+    <string name="birthday">DataNasc</string>
+    <string name="phone">Telefone</string>
+    <string name="symptons">SINTOMAS</string>
+    <string name="age">Idade</string>
 </resources>
