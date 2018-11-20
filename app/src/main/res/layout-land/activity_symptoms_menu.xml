@@ -9,6 +9,14 @@
         tools:context=".SymptomsMenuActivity" tools:layout_editor_absoluteY="25dp"
         android:id="@+id/menu_image_view_back3menu_image_view_back3">
 
+    <Button
+            android:text="@string/finish_symptoms_button"
+            android:layout_width="match_parent"
+            android:layout_height="73dp" android:id="@+id/btnFinishSymptoms2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="126dp" app:srcCompat="@mipmap/logo"
@@ -26,19 +34,6 @@
                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
-    <Button
-            android:text="@string/finish_symptoms_button"
-            android:layout_width="0dp"
-            android:id="@+id/btnFinishSymptoms"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="0dp"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:background="@color/black"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            app:layout_constraintBottom_toBottomOf="parent"/>
     <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"

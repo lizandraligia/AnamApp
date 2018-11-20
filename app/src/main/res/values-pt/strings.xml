@@ -50,4 +50,5 @@
     <string name="register_nurse">Cadastrar Enfermeiro</string>
     <string name="register_hospital">Cadastrar Hospital</string>
     <string name="btn_create_account">Criar Conta</string>
+    <string name="profile">Informações do Hospital</string>
 </resources>

@@ -25,5 +25,9 @@ class MenuActivity: AppCompatActivity() {
             finish()
         }
 
+        btnInfo.setOnClickListener {
+            val intent = Intent(applicationContext, HospitalProfile::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -48,7 +48,8 @@
     <string name="btn_create_account">Create Account</string>
 
     <string name="btn_register_new_nurses">REGISTER NEW EMPLOYEE</string>
-    <string name="tv_employee_list">Employee List</string>
+    <string name="tv_employee_list">Employees List</string>
+    <string name="profile">Hospital Info</string>
 
 
 </resources>

@@ -27,17 +27,12 @@
     />
     <Button
             android:text="@string/finish_symptoms_button"
-            android:layout_width="0dp"
-            android:id="@+id/btnFinishSymptoms"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="0dp"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:background="@color/black"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_width="match_parent"
+            android:layout_height="73dp" android:id="@+id/btnFinishSymptoms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -111,6 +106,16 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/btnGastrointestinalSystemSymptoms" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@+id/btnGenitourinarySystemSymptoms"
+                    android:text="@string/gastrointestinal_system_symptoms_button"
+                    android:textAlignment="viewStart"/>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:id="@+id/btnGenitourinarySystemSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -119,16 +124,6 @@
                     android:text="@string/genitourinary_system_symptoms_button"
                     android:textAlignment="viewStart"/>
 
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnGastrointestinalSystemSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnGenitourinarySystemSymptoms"
-                    android:text="@string/gastrointestinal_system_symptoms_button"
-                    android:textAlignment="viewStart"/>
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
