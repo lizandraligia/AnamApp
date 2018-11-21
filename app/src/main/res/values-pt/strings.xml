@@ -44,4 +44,11 @@
     <string name="register_nurse">Cadastrar Enfermeiro</string>
     <string name="register_hospital">Cadastrar Hospital</string>
     <string name="btn_create_account">Criar Conta</string>
+    <string name="search_patient_item_text_field_name">Nome:</string>
+    <string name="search_patient_item_text_field_medical_record">Prontuário:</string>
+    <string name="patient_text_field_birth_date">Data de Nascimento:</string>
+    <string name="patient_text_field_fone">Telefone:</string>
+    <string name="patient_text_field_age">Idade:</string>
+    <string name="patient_text_field_symptoms">Sintomas</string>
+    <string name="patient_text_field_medical_record">Prontuário:</string>
 </resources>

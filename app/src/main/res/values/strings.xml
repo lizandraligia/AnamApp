@@ -15,7 +15,20 @@
     <string name="search_patient_text_field_search_patient">Search Patient</string>
     <string name="search_patient_hint_patient_number">" nº patient"</string>
     <string name="search_patient_button_search">Search</string>
+
+
     <string name="symptons_check_list_title">Check List</string>
+
+
+    <string name="search_patient_item_text_field_name">Name:</string>
+    <string name="search_patient_item_text_field_medical_record">Medical Record:</string>
+
+
+    <string name="patient_text_field_medical_record">Medical Record:</string>
+    <string name="patient_text_field_birth_date">Birth Date:</string>
+    <string name="patient_text_field_fone">Fone:</string>
+    <string name="patient_text_field_age">Age:</string>
+    <string name="patient_text_field_symptoms">Symptoms</string>
 
 
     <string name="finish_symptoms_button">FINISH SYMPTOMS</string>
