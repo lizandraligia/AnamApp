@@ -22,7 +22,9 @@
         <activity android:name=".MenuActivity"/>
         <activity android:name=".SymptomsMenuActivity"/>
         <activity android:name=".SearchPatientResultActivity"/>
-        <activity android:name=".PatientActivity" />
+        <activity android:name=".PatientActivity"/>
+        <activity android:name=".RegisterPatientActivity">
+        </activity>
     </application>
 
 </manifest>
