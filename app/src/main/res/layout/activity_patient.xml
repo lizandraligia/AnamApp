@@ -14,22 +14,41 @@
     <ImageView
             android:layout_width="33dp"
             android:layout_height="31dp" app:srcCompat="?attr/actionModeCloseDrawable"
-            android:id="@+id/search_patient_image_view_back2" android:layout_marginTop="8dp"
+            android:id="@+id/patient_image_view_back" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
-    <TextView
-            android:text="Nº Prontuário"
-            android:layout_width="wrap_content"
+
+
+    <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="483dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.14" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.515"/>
+            android:gravity="right"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/patient_image_view_back"
+            app:layout_constraintBottom_toBottomOf="@+id/patient_image_view_back">
+
+        <TextView
+                android:text="@string/patient_text_field_medical_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:id="@+id/patient_text_view_medical_record"
+                android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+
+
     <ImageView
             android:layout_width="44dp"
             android:layout_height="46dp" tools:srcCompat="@tools:sample/avatars[0]"
@@ -40,49 +59,112 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.01"/>
     <TextView
             android:text="NOME DO PACIENTE"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            android:id="@+id/patient_text_view_name" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.211" android:textSize="30sp"
-            android:textColor="#FFFFFF"/>
-    <TextView
-            android:text="DataNasc"
-            android:layout_width="wrap_content"
+            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.20999998" android:textSize="30sp"
+            android:textColor="#FFFFFF" android:maxLines="1" android:ellipsize="end"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" android:textColor="#FFFFFF"
-            android:textSize="20sp" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" app:layout_constraintHorizontal_bias="0.125"/>
-    <TextView
-            android:text="Idade"
-            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/patient_text_view_name" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView9" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+            <TextView
+                    android:text="@string/patient_text_field_birth_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/patient_text_view_birth_date"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView7" android:textColor="#FFFFFF"
-            android:textSize="20sp" app:layout_constraintStart_toEndOf="@+id/textView6"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias="0.727"/>
-    <TextView
-            android:text="Telefone"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+        <TextView
+                android:text="@string/patient_text_field_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/patient_text_view_age"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8" android:textColor="#FFFFFF"
-            android:textSize="20sp" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" app:layout_constraintHorizontal_bias="0.12"/>
+            android:orientation="horizontal">
+
+        <TextView
+                android:text="@string/patient_text_field_fone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:id="@+id/patient_text_view_fone"/>
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
     <View
             android:layout_width="277dp"
             android:layout_height="248dp"
             android:id="@+id/view2" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.94"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.565" android:background="#DDDDDD"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.95"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#DDDDDD"/>
     <TextView
-            android:text="SINTOMAS"
+            android:text="@string/patient_text_field_symptoms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView9" android:layout_marginTop="8dp"
@@ -90,5 +172,6 @@
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.479"
-            android:textColor="#FFFFFF" android:textSize="29sp" android:textStyle="bold"/>
+            android:textColor="#FFFFFF" android:textSize="30sp" android:textStyle="bold"/>
+
 </android.support.constraint.ConstraintLayout>
