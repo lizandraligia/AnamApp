@@ -10,11 +10,17 @@
 
     <string name="main_menu_button_registrate_patient">Registrar Paciente</string>
     <string name="main_menu_button_search_patient">Buscar Paciente</string>
+    <string name="main_menu_button_list_employees">Lista de Funcionários</string>
+
     <string name="login_hint_login">" Login"</string>
     <string name="search_patient_text_field_search_patient">Buscar Paciente</string>
     <string name="search_patient_hint_patient_number">" nº paciente"</string>
     <string name="search_patient_button_search">Buscar</string>
     <string name="symptons_check_list_title">Check List</string>
+
+
+    <string name="btn_register_new_nurses">CADASTRAR NOVO FUNCIONÁRIO</string>
+    <string name="tv_employee_list">Lista de Funcionários</string>
 
 
     <string name="finish_symptoms_button">FINALIZAR SINTOMAS</string>
@@ -44,4 +50,5 @@
     <string name="register_nurse">Cadastrar Enfermeiro</string>
     <string name="register_hospital">Cadastrar Hospital</string>
     <string name="btn_create_account">Criar Conta</string>
+    <string name="profile">Informações do Hospital</string>
 </resources>

@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
 
     <ImageView
-        android:id="@+id/ImageView"
+        android:id="@+id/imageView"
         android:layout_width="211dp"
         android:layout_height="141dp"
         android:layout_marginEnd="80dp"
@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/btnFinishSymptoms"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="600dp"
+        android:layout_width="632dp"
         android:layout_height="0dp"
         android:layout_marginEnd="300dp"
         android:background="@color/black"
@@ -46,8 +46,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="599dp"
-        android:layout_height="567dp"
+        android:layout_width="632dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="130dp"
         android:layout_marginEnd="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,4 +205,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/btnLocomotorSystemSymptoms" />
         </LinearLayout>
     </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

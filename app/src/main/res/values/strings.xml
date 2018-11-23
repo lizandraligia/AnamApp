@@ -10,6 +10,7 @@
 
     <string name="main_menu_button_registrate_patient">Registrate Patient</string>
     <string name="main_menu_button_search_patient">Search Patient</string>
+    <string name="main_menu_button_list_employees">Employee List</string>
 
 
     <string name="search_patient_text_field_search_patient">Search Patient</string>
@@ -45,6 +46,10 @@
     <string name="register_nurse">Register Nurse</string>
     <string name="register_hospital">Register Hospital</string>
     <string name="btn_create_account">Create Account</string>
+
+    <string name="btn_register_new_nurses">REGISTER NEW EMPLOYEE</string>
+    <string name="tv_employee_list">Employees List</string>
+    <string name="profile">Hospital Info</string>
 
 
 </resources>

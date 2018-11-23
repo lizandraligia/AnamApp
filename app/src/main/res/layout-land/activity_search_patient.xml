@@ -6,6 +6,8 @@
                                              android:layout_height="match_parent"
                                              android:background="@color/colorPrimary">
 
+
+
     <ImageView
             android:layout_width="33dp"
             android:layout_height="31dp" app:srcCompat="?attr/actionModeCloseDrawable"

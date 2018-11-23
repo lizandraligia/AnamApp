@@ -16,9 +16,18 @@ class MenuActivity: AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnRegPaciente.setOnClickListener {
+            val intent = Intent(applicationContext, SymptomsMenuActivity::class.java)
+            startActivity(intent)
+        }
+
         menu_image_view_back.setOnClickListener {
             finish()
         }
 
+        btnInfo.setOnClickListener {
+            val intent = Intent(applicationContext, HospitalProfile::class.java)
+            startActivity(intent)
+        }
     }
 }

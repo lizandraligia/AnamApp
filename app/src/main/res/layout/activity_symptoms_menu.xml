@@ -8,10 +8,16 @@
         android:background="@color/colorPrimary"
         tools:context=".SymptomsMenuActivity" tools:layout_editor_absoluteY="25dp">
 
+    <ImageView android:layout_width="33dp" android:layout_height="31dp" app:srcCompat="?attr/actionModeCloseDrawable"
+               android:id="@+id/menu_image_view_back3" android:layout_marginTop="8dp"
+               app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+               android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+               android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content" app:srcCompat="@mipmap/logo"
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewSymptoms"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -21,22 +27,17 @@
     />
     <Button
             android:text="@string/finish_symptoms_button"
-            android:layout_width="0dp"
-            android:id="@+id/btnFinishSymptoms"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="0dp"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:background="@color/black"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_width="match_parent"
+            android:layout_height="73dp" android:id="@+id/btnFinishSymptoms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/scrollView2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewSymptoms"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0"
@@ -105,6 +106,16 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/btnGastrointestinalSystemSymptoms" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@+id/btnGenitourinarySystemSymptoms"
+                    android:text="@string/gastrointestinal_system_symptoms_button"
+                    android:textAlignment="viewStart"/>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:id="@+id/btnGenitourinarySystemSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -113,16 +124,6 @@
                     android:text="@string/genitourinary_system_symptoms_button"
                     android:textAlignment="viewStart"/>
 
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnGastrointestinalSystemSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnGenitourinarySystemSymptoms"
-                    android:text="@string/gastrointestinal_system_symptoms_button"
-                    android:textAlignment="viewStart"/>
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

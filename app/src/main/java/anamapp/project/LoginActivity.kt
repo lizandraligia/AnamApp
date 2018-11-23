@@ -15,6 +15,11 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(applicationContext, MenuActivity::class.java)
             startActivity(intent)
         }
+
+        text_field_sign_up.setOnClickListener {
+            val intent = Intent(applicationContext, SignUpActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
