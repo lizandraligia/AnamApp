@@ -4,10 +4,7 @@ import anamapp.project.bean.Constant
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
-import android.support.v4.app.FragmentManager
-import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.activity_symptoms_menu.*
-import java.io.File
 
 class SymptomsMenuActivity : AppCompatActivity() {
 
@@ -32,13 +29,13 @@ class SymptomsMenuActivity : AppCompatActivity() {
             try {
                 val inputStream = assets.open("general_symptoms.json")
                 val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_STRING, jsonString)
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
             }
 
-            startActivity(intent)
+            startActivityForResult(intent, Constant.REQUEST_CODE_GENERAL_SYMPTOMS)
         }
         btnHeadAndNeckSymptoms.setOnClickListener {
             val intent = Intent(applicationContext, CheckList::class.java)
@@ -91,4 +88,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == Constant.REQUEST_CODE_SYMPTOMS && resultCode == Constant.RESULT_CODE_SYMPTOMS && data != null ) {
+            println(data.getStringExtra(Constant.JSON_RESULT))
+        }
+    }
+
+
 }
