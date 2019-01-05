@@ -7,9 +7,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_check_list.*
-import kotlinx.android.synthetic.main.list_view_item_checklist_checkbox.*
+import kotlinx.android.synthetic.main.scroll_view_item_checklist_checkbox.*
 import org.json.JSONObject
 
 
@@ -21,26 +22,30 @@ class CheckList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_list)
 
-        var txtView = findViewById<View>(R.id.textView3) as TextView
-        val nome: String = intent.getStringExtra("sintoma")
+        var txtView = activity_checklist_text_field_symptom_title
+        val nome: String = intent.getStringExtra(Constant.SYMPTOM)
         txtView.text = nome
 
-//        this.addCheckbox("Diarréia")
-//        this.addCheckbox("Febre")
-        this.drawScreen(intent)
+        this.drawScreen(intent)             // TODO remove this later
 
         activity_checklist_button_submit.setOnClickListener {
             this.jsonResult = JSONObject()
             val checkList = activity_checklist_linear_layout_checklist
 
+            this.jsonResult.put(Constant.TITLE_PAGE_SYMPTOM, activity_checklist_text_field_symptom_title.text.toString()) // Add title page to jsonResult for identification
             for(index in 0 .. (checkList.childCount-1)) {
                 val itemView = checkList.getChildAt(index)
 
                 when(this.viewType(itemView!!)) {
                     Constant.CHECKLIST_CHECKBOX -> {
                         val checkbox = itemView.findViewById<CheckBox>(R.id.checklist_item_checkbox_checkbox)
-                        val label = itemView.findViewById<TextView>(R.id.checklist_item_edit_text_label)
+                        val label = itemView.findViewById<TextView>(R.id.checklist_item_checkbox_text_view_label)
                         this.jsonResult.put(label.text.toString(), checkbox.isChecked)
+                    }
+                    Constant.CHECKLIST_PLAIN_TEXT -> {
+                        val editText = itemView.findViewById<EditText>(R.id.checklist_item_plain_text_edit_text_info)
+                        val label = itemView.findViewById<TextView>(R.id.checklist_item_plain_text_text_view_label)
+                        this.jsonResult.put(label.text.toString(), editText.text.toString())
                     }
                     // TODO make to other views types as EditTexts
                 }
@@ -49,10 +54,8 @@ class CheckList : AppCompatActivity() {
             // Return jsonResult as string
             val it = Intent()
             it.putExtra(Constant.JSON_RESULT, this.jsonResult.toString())
-            val resultCode = when(intent.)  // TODO stopped here
-            setResult(Constant.RESULT_CODE_GENERAL_SYMPTOMS, it)
+            setResult(Constant.RESULT_CODE_SYMPTOMS, it)
             finish()
-//            println(this.jsonResult.toString())
         }
     }
 
@@ -60,8 +63,12 @@ class CheckList : AppCompatActivity() {
     /* This function returns the type of view in question if was CheckBox, EditText, etc */
     private fun viewType(view: View): String? {
         val checkbox = view.findViewById<CheckBox>(R.id.checklist_item_checkbox_checkbox)
+        val editText = view.findViewById<EditText>(R.id.checklist_item_plain_text_edit_text_info)
+
         if(checkbox != null)
             return Constant.CHECKLIST_CHECKBOX
+        if(editText != null)
+            return Constant.CHECKLIST_PLAIN_TEXT
 
         return null
     }
@@ -78,17 +85,29 @@ class CheckList : AppCompatActivity() {
 
             when(this.jsonScreen.getString(key)) {
                 Constant.CHECKLIST_CHECKBOX -> this.addCheckbox(key)
+                Constant.CHECKLIST_PLAIN_TEXT -> this.addPlainText(key)
                 // ... Others
             }
         }
     }
 
 
-    private fun addCheckbox(label: String) {
-        val view: View = LayoutInflater.from(this).inflate(R.layout.list_view_item_checklist_checkbox, checklist_item_linear_layout, false)
+    private fun addPlainText(label: String) {
+        val view: View = LayoutInflater.from(this).inflate(R.layout.scroll_view_item_checklist_plain_text, checklist_item_linear_layout, false)
 
-        val viewLabel = view.findViewById<TextView>(R.id.checklist_item_edit_text_label)
-        val checkbox = view.findViewById<TextView>(R.id.checklist_item_checkbox_checkbox)
+        val viewLabel = view.findViewById<TextView>(R.id.checklist_item_plain_text_text_view_label)
+        val editText = view.findViewById<EditText>(R.id.checklist_item_plain_text_edit_text_info)
+
+        viewLabel.text = label
+
+        activity_checklist_linear_layout_checklist.addView(view)
+    }
+
+    private fun addCheckbox(label: String) {
+        val view: View = LayoutInflater.from(this).inflate(R.layout.scroll_view_item_checklist_checkbox, checklist_item_linear_layout, false)
+
+        val viewLabel = view.findViewById<TextView>(R.id.checklist_item_checkbox_text_view_label)
+        val checkbox = view.findViewById<CheckBox>(R.id.checklist_item_checkbox_checkbox)
 
         viewLabel.text = label
 

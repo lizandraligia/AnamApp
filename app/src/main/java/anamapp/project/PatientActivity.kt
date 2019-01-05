@@ -16,11 +16,11 @@ class PatientActivity : AppCompatActivity() {
 
         val patient = PatientSearchResult.patient
 
-        patient_text_view_medical_record.setText(patient.medical_record)
-        patient_text_view_name.setText(patient.name)
-        patient_text_view_birth_date.setText(patient.birth_date)
-        patient_text_view_age.setText(patient.age.toString())
-        patient_text_view_fone.setText(patient.fone)
+        patient_text_view_medical_record.text = patient.medical_record
+        patient_text_view_name.text = patient.name
+        patient_text_view_birth_date.text = patient.birth_date
+        patient_text_view_age.text = patient.age.toString()
+        patient_text_view_fone.text = patient.fone
 
 
         patient_image_view_back.setOnClickListener {
