@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".SignUpActivity">
+    tools:context=".activities.SignUpActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -47,7 +47,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/hopital_name"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -66,7 +66,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/city"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -85,7 +85,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/state"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -104,8 +104,62 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/address"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.172"/>
+            <EditText
+                    android:id="@+id/edit_text_email_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_et"
+                    android:hint="@string/email_hint"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.172"/>
+            <EditText
+                    android:id="@+id/edit_text_password_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_et"
+                    android:hint="@string/login_hint_password"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.172"/>
+            <EditText
+                    android:id="@+id/edit_text_confirm_password_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_et"
+                    android:hint="@string/sign_up_confirm_password"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -116,8 +170,9 @@
                     app:layout_constraintVertical_bias="0.172"/>
             <Button
                     android:text="@string/btn_create_account"
+                    android:background="@drawable/round_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button2"/>
+                    android:layout_height="wrap_content" android:id="@+id/btn_signUp_create"/>
 
         </LinearLayout>
     </ScrollView>

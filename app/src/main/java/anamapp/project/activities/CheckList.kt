@@ -1,5 +1,6 @@
-package anamapp.project
+package anamapp.project.activities
 
+import anamapp.project.R
 import anamapp.project.bean.Constant
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity

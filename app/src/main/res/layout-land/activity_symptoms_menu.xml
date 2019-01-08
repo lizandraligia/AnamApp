@@ -6,12 +6,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
-        tools:context=".SymptomsMenuActivity" tools:layout_editor_absoluteY="25dp"
+        tools:context=".activities.SymptomsMenuActivity" tools:layout_editor_absoluteY="25dp"
         android:id="@+id/menu_image_view_back3menu_image_view_back3">
 
     <Button
             android:text="@string/finish_symptoms_button"
             android:layout_width="match_parent"
+            android:background="@drawable/round_btn"
             android:layout_height="73dp" android:id="@+id/btnFinishSymptoms2"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +50,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnGeneralSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintTop_toTopOf="@+id/scrollView2" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -57,6 +59,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnHeadAndNeckSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -67,6 +70,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnEyeSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -77,6 +81,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnEarSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -87,6 +92,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnNoseSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -97,6 +103,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnRespiratorySystemSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -107,6 +114,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnGenitourinarySystemSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -118,6 +126,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnGastrointestinalSystemSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -128,6 +137,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnLocomotorSystemSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -138,6 +148,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnNervousSystem" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
@@ -148,6 +159,7 @@
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_btn"
                     android:id="@+id/btnPsycheSymptoms" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    tools:context=".LoginActivity"
+    tools:context=".activities.LoginActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <ImageView
@@ -39,8 +39,9 @@
             android:layout_height="30dp"
             android:layout_marginStart="42dp"
             android:layout_marginEnd="42dp"
-            android:background="@color/white"
+            android:background="@drawable/round_et"
             android:hint="@string/login_hint_login"
+
             android:textColorHint="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
@@ -53,7 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginTop="42dp"
-        android:background="@color/white"
+        android:background="@drawable/round_et"
         android:hint="@string/login_hint_password"
         android:inputType="textPersonName"
         android:textColorHint="@color/colorPrimary"
@@ -73,6 +74,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/text_field_sign_up"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password"
+            android:background="@drawable/round_btn"
             app:layout_constraintVertical_bias="0.25"/>
 
     <TextView

@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
-        tools:context=".RegisterPatientActivity">
+        tools:context=".activities.RegisterPatientActivity">
 
     <ImageView
             android:layout_width="0dp"
@@ -66,13 +66,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginBottom="32dp"
-                android:background="@color/white"
+                android:background="@drawable/round_et"
                 android:hint="@string/register_patient_hint_medical_record"
                 android:id="@+id/register_patient_edit_text_medical_record"/>
 
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/round_btn"
                 android:text="@string/register_patient_button_registrate"
                 android:layout_gravity="right" android:id="@+id/register_patient_button_registrate"/>
 

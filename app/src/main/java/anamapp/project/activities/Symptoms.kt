@@ -1,4 +1,4 @@
-package anamapp.project
+package anamapp.project.activities
 
 import java.io.Serializable
 

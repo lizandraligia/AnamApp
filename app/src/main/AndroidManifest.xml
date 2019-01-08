@@ -11,24 +11,28 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SearchPatientActivity"/>
-        <activity android:name=".MenuActivity"/>
-        <activity android:name=".SymptomsMenuActivity"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".ListNursesActivity"/>
-        <activity android:name=".registerNewEmployeeActivity"/>
-        <activity android:name=".CheckList"/>
-        <activity android:name=".HospitalProfile"/>
-        <activity android:name=".SearchPatientResultActivity"/>
-        <activity android:name=".PatientActivity"/>
-        <activity android:name=".RegisterPatientActivity"/>
+        <activity android:name=".activities.SearchPatientActivity"/>
+        <activity android:name=".activities.MenuActivity"/>
+        <activity android:name=".activities.SymptomsMenuActivity"/>
+        <activity android:name=".activities.SignUpActivity"/>
+        <activity android:name=".activities.ListNursesActivity"/>
+        <activity android:name=".activities.registerNewEmployeeActivity"/>
+        <activity android:name=".activities.CheckList"/>
+        <activity android:name=".activities.HospitalProfile"/>
+        <activity android:name=".activities.SearchPatientResultActivity"/>
+        <activity android:name=".activities.PatientActivity"/>
+        <activity android:name=".activities.RegisterPatientActivity"/>
+
     </application>
+
+
+
 
 </manifest>

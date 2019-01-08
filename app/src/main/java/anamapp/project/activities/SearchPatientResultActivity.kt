@@ -1,7 +1,7 @@
-package anamapp.project
+package anamapp.project.activities
 
+import anamapp.project.R
 import anamapp.project.adapter.SearchPatientAdapter
-import anamapp.project.bean.Patient
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_search_patient_result.*

@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HospitalProfile" android:background="@color/colorPrimary">
+        tools:context=".activities.HospitalProfile" android:background="@color/colorPrimary">
 
     <ImageView
             android:id="@+id/imageView11"
@@ -37,7 +37,8 @@
             android:id="@+id/textView12" android:textColor="#FFFFFF"
             android:textSize="20sp" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.079" tools:layout_editor_absoluteY="252dp"/>
+            app:layout_constraintHorizontal_bias="0.079" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"/>
     <TextView
             android:text="@string/address"
             android:layout_width="wrap_content"
@@ -51,17 +52,19 @@
             android:text="@string/hopital_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView11" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            android:id="@+id/textView11"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.322" android:textSize="20sp"
-            android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.104"/>
+            android:layout_marginStart="8dp" android:textSize="20sp"
+            android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.11" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11" app:layout_constraintVertical_bias="0.072"/>
     <Button
             android:text="@string/tv_employee_list"
             android:layout_width="315dp"
             android:layout_height="68dp"
             android:id="@+id/btnFuncionario" app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/round_btn"
             android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"

@@ -5,7 +5,7 @@
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
                                              android:background="@color/colorPrimary"
-                                             tools:context=".SignUpActivity">
+                                             tools:context=".activities.SignUpActivity">
 
     <ImageView
             android:id="@+id/imageView5"
@@ -60,7 +60,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/hopital_name"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -79,7 +79,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/city"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -98,7 +98,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/state"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -117,7 +117,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="@color/white"
+                    android:background="@drawable/round_et"
                     android:hint="@string/address"
                     android:inputType="text"
                     android:textColorHint="@color/colorPrimary"
@@ -130,6 +130,7 @@
 
             <Button
                     android:id="@+id/button"
+                    android:background="@drawable/round_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_create_account"/>

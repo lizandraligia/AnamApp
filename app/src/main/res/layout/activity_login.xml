@@ -1,51 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/colorPrimary" android:orientation="vertical" tools:context=".LoginActivity" tools:layout_editor_absoluteY="25dp">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent" android:layout_height="match_parent"
+                                             android:background="@color/colorPrimary" android:orientation="vertical"
+                                             tools:context=".activities.LoginActivity"
+                                             tools:layout_editor_absoluteY="25dp">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="top"
-        android:layout_margin="8dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintDimensionRatio="3:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/logo"/>
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="top"
-        android:layout_margin="8dp"
-        app:layout_constraintDimensionRatio="3:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"
-        app:srcCompat="@mipmap/avatar" />
-
-    <EditText android:id="@+id/login_edit_text_login" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginEnd="8dp" android:layout_marginStart="8dp" android:layout_marginTop="64dp" android:background="@color/white" android:hint="@string/login_hint_login" android:textColorHint="@color/colorPrimary" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+            android:layout_margin="8dp"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            app:srcCompat="@mipmap/avatar"/>
 
     <EditText
-        android:id="@+id/login_edit_text_password"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:hint="@string/login_hint_password"
-        android:inputType="textPassword"
-        android:textColorHint="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_edit_text_login" />
+            android:id="@+id/login_edit_text_login" android:layout_width="match_parent" android:layout_height="29dp"
+            android:layout_marginEnd="8dp" android:layout_marginStart="8dp" android:layout_marginTop="64dp"
+            android:background="@drawable/round_et" android:hint="@string/login_hint_login"
+            android:textColorHint="@color/colorPrimary" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
 
-    <Button android:id="@+id/login_button_enter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginEnd="8dp" android:layout_marginStart="8dp" android:text="@string/login_button_enter" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password" android:layout_marginTop="16dp" android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/text_field_sign_up" app:layout_constraintVertical_bias="0.25"/>
+    <EditText
+            android:id="@+id/login_edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_et"
+            android:hint="@string/login_hint_password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_edit_text_login"/>
 
-    <TextView android:id="@+id/text_field_sign_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom" android:gravity="bottom" android:layout_marginBottom="8dp" android:text="@string/login_text_field_sign_up_invite" android:textColor="@color/white" android:textIsSelectable="true" android:textSize="16dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+    <Button android:id="@+id/login_button_enter" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginEnd="8dp"
+            android:background="@drawable/round_btn"
+            android:layout_marginStart="8dp" android:text="@string/login_button_enter"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password" android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/text_field_sign_up"
+            app:layout_constraintVertical_bias="0.25"/>
+
+    <TextView android:id="@+id/text_field_sign_up" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_gravity="bottom" android:gravity="bottom"
+              android:layout_marginBottom="8dp" android:text="@string/login_text_field_sign_up_invite"
+              android:textColor="@color/white" android:textIsSelectable="true" android:textSize="16dp"
+              app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"/>
 
 
 </android.support.constraint.ConstraintLayout>

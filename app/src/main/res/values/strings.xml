@@ -71,4 +71,24 @@
     <string name="profile">Hospital Info</string>
 
 
+
+
+    <string name="facebook_application_id" translatable="false">378514916247136</string>
+
+
+    <string name="email_or_password_invalids">E-mail address invalid or passwords doesn\'t matches</string>
+
+    <string name="email_hint" translatable="false">E-mail</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_confirm_password">Confirm password</string>
+
+    <string name="authentication_failed">Authentication Failed</string>
+
+
+
+
+
+
+
+
 </resources>
