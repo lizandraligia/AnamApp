@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
     tools:context=".activities.LoginActivity"
     tools:layout_editor_absoluteY="25dp">
@@ -15,7 +15,7 @@
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="4:1"
             android:layout_gravity="center"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/gradient_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/logo" android:layout_marginTop="16dp"/>
