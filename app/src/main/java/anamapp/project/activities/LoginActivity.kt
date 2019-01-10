@@ -50,10 +50,15 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = mAuth.currentUser
-        if (currentUser != null) {
+        if (currentUser != null && intent.getBooleanExtra("Boolean", false)) {
             val intent = Intent(applicationContext, MenuActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    public override fun onRestart() {
+        super.onRestart()
+        signOut()
     }
 
     /* Save data through rotations */
@@ -78,6 +83,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         login_edit_text_password.setText(password)
     }
 
+     private fun signOut() {
+        mAuth.signOut()
+
+    }
     private fun signIn(email: String = "", password: String = "") {
         if (!validateForm(email, password)) {
             return
@@ -95,6 +104,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")
                     val intent = Intent(applicationContext, MenuActivity::class.java)
+
                     progressBar.visibility = View.GONE
                     startActivity(intent)
 

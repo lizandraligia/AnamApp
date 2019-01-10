@@ -87,5 +87,9 @@
     <string name="superior_locomotor_system_button">SUPERIOR LOCOMOTOR SYSTEM</string>
     <string name="inferior_locomotor_system_button">INFERIOR LOCOMOTOR SYSTEM</string>
 
+    <string name="authentication_sucessfull"> Authenticated successfully</string>
+
+
+
 
 </resources>

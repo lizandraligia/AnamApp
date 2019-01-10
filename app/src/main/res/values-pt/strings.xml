@@ -72,4 +72,7 @@
     <string name="cardiovascular_system_button">SISTEMA CARDIOVASCULAR</string>
     <string name="superior_locomotor_system_button">SISTEMA LOCOMOTOR SUPERIOR</string>
     <string name="inferior_locomotor_system_button">SISTEMA LOCOMOTOR INFERIOR</string>
+
+
+    <string name="authentication_sucessfull"> Autenticado com sucesso</string>
 </resources>

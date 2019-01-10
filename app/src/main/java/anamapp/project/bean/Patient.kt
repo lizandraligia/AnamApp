@@ -12,6 +12,8 @@ class Patient(  name : String,
                 fone : String,
                 age : Int ) {
 
+
+
     var name = name
     var medical_record = medical_record
     var birth_date = birth_date
