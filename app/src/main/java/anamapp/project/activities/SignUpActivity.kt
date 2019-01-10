@@ -78,6 +78,10 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                         progressBar2.visibility = View.GONE
                         startActivity(intent)
                     }
+                    Toast.makeText(
+                        baseContext, getString(R.string.authentication_failed),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 } else {
 
                     try {
@@ -111,17 +115,22 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                 .setDisplayName(tfHospitalName.text.toString())
                 .build()
 
-            user.updateProfile(profile).addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    bool = true
-                } else {
-                    user.delete()
-                    Toast.makeText(
-                        baseContext, getString(R.string.authentication_failed),
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
+
+
+
+            try {
+                user.updateProfile(profile)
+                bool = true
+            } catch (e: Exception) {
+
+                user.delete()
+                Toast.makeText(
+                    baseContext, getString(R.string.authentication_failed),
+                    Toast.LENGTH_LONG
+                ).show()
+                bool = false
             }
+
         }
         return bool
 
