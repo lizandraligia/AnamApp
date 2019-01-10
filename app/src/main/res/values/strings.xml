@@ -40,17 +40,9 @@
 
     <string name="finish_symptoms_button">FINISH SYMPTOMS</string>
     <string name="general_symptoms_button">GENERAL SYMPTOMS</string>
-    <string name="head_and_neck_symptoms_button">HEAD AND NECK</string>
-    <string name="eyes_symptoms_button">EYES</string>
-    <string name="ears_symptoms_button">EARS</string>
-    <string name="nose_symptoms_button">NOSE</string>
     <string name="respiratory_system_symptoms_button">RESPIRATORY SYSTEM</string>
-    <string name="circulatory_system_symptoms_button">CIRCULATORY SYSTEM</string>
     <string name="gastrointestinal_system_symptoms_button">GASTROINTESTINAL SYSTEM</string>
     <string name="genitourinary_system_symptoms_button">GENITOURINARY SYSTEM</string>
-    <string name="locomotor_system_symptoms_button">LOCOMOTOR SYSTEM</string>
-    <string name="nervous_system_symptoms_button">NERVOUS SYSTEM</string>
-    <string name="psyche_symptoms_button">PSYCHE</string>
     <string name="num_prontuario">Patient\'s number</string>
     <string name="patient_name">PATIENT\'S NAME</string>
     <string name="birthday">Birthday</string>
@@ -91,12 +83,9 @@
     <string name="user_already_exists">E-mail already registered</string>
 
     <string name="weak_pass">Weak password</string>
-
-
-
-
-
-
+    <string name="cardiovascular_system_button">CARDIOVASCULAR SYSTEM</string>
+    <string name="superior_locomotor_system_button">SUPERIOR LOCOMOTOR SYSTEM</string>
+    <string name="inferior_locomotor_system_button">INFERIOR LOCOMOTOR SYSTEM</string>
 
 
 </resources>

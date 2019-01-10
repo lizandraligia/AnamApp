@@ -43,14 +43,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
 
             startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
         }
-        btnHeadAndNeckSymptoms.setOnClickListener {
+
+        btnSupLocomotor.setOnClickListener {
             val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnHeadAndNeckSymptoms.text.toString())
+            intent.putExtra(Constant.SYMPTOM, btnSupLocomotor.text.toString())
 
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("head_and_neck_symptoms.json")
+                val inputStream = assets.open("suplocomotor_symptoms.json")
                 val jsonString = inputStream.bufferedReader().use { it.readText() }
                 intent.putExtra(Constant.JSON_SCREEN, jsonString)
             } catch (e: Exception) {
@@ -60,14 +61,14 @@ class SymptomsMenuActivity : AppCompatActivity() {
 
             startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
         }
-        btnEyeSymptoms.setOnClickListener {
+        btnInfLocomotor.setOnClickListener {
             val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnEyeSymptoms.text.toString())
+            intent.putExtra(Constant.SYMPTOM, btnInfLocomotor.text.toString())
 
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("eye_symptoms.json")
+                val inputStream = assets.open("inflocomotor_symptoms.json")
                 val jsonString = inputStream.bufferedReader().use { it.readText() }
                 intent.putExtra(Constant.JSON_SCREEN, jsonString)
             } catch (e: Exception) {
@@ -77,40 +78,7 @@ class SymptomsMenuActivity : AppCompatActivity() {
 
             startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
         }
-        btnEarSymptoms.setOnClickListener {
-            val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnEarSymptoms.text.toString())
 
-            // Input method of data, may be changed to database source or remote base
-            // i choice local files for tests
-            try {
-                val inputStream = assets.open("ear_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                return@setOnClickListener
-            }
-
-            startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
-        }
-        btnNoseSymptoms.setOnClickListener {
-            val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnNoseSymptoms.text.toString())
-
-            // Input method of data, may be changed to database source or remote base
-            // i choice local files for tests
-            try {
-                val inputStream = assets.open("nose_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                return@setOnClickListener
-            }
-
-            startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
-        }
         btnRespiratorySystemSymptoms.setOnClickListener {
             val intent = Intent(applicationContext, CheckList::class.java)
             intent.putExtra(Constant.SYMPTOM, btnRespiratorySystemSymptoms.text.toString())
@@ -162,14 +130,14 @@ class SymptomsMenuActivity : AppCompatActivity() {
 
             startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
         }
-        btnLocomotorSystemSymptoms.setOnClickListener {
+        btnCardiovascular.setOnClickListener {
             val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnLocomotorSystemSymptoms.text.toString())
+            intent.putExtra(Constant.SYMPTOM, btnCardiovascular.text.toString())
 
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("locomotor_system_symptoms.json")
+                val inputStream = assets.open("cardiovascular_symptoms.json")
                 val jsonString = inputStream.bufferedReader().use { it.readText() }
                 intent.putExtra(Constant.JSON_SCREEN, jsonString)
             } catch (e: Exception) {
@@ -179,40 +147,8 @@ class SymptomsMenuActivity : AppCompatActivity() {
 
             startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
         }
-        btnNervousSystem.setOnClickListener {
-            val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnNervousSystem.text.toString())
 
-            // Input method of data, may be changed to database source or remote base
-            // i choice local files for tests
-            try {
-                val inputStream = assets.open("nervous_system_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                return@setOnClickListener
-            }
 
-            startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
-        }
-        btnPsycheSymptoms.setOnClickListener {
-            val intent = Intent(applicationContext, CheckList::class.java)
-            intent.putExtra(Constant.SYMPTOM, btnPsycheSymptoms.text.toString())
-
-            // Input method of data, may be changed to database source or remote base
-            // i choice local files for tests
-            try {
-                val inputStream = assets.open("psyche_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                return@setOnClickListener
-            }
-
-            startActivityForResult(intent, Constant.REQUEST_CODE_SYMPTOMS)
-        }
     }
 
 

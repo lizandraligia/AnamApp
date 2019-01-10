@@ -56,117 +56,91 @@
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                     android:text="@string/general_symptoms_button" android:textAlignment="viewStart"
             />
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnHeadAndNeckSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnGeneralSymptoms"
-                    android:text="@string/head_and_neck_symptoms_button" android:textAlignment="viewStart"
-            />
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnEyeSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnHeadAndNeckSymptoms"
-                    android:text="@string/eyes_symptoms_button" android:textAlignment="viewStart"
-            />
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnEarSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnEyeSymptoms"
-                    android:text="@string/ears_symptoms_button"
-                    android:textAlignment="viewStart"/>
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnNoseSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnEarSymptoms"
-                    android:text="@string/nose_symptoms_button"
-                    android:textAlignment="viewStart"/>
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnRespiratorySystemSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnNoseSymptoms"
-                    android:text="@string/respiratory_system_symptoms_button"
-                    android:textAlignment="viewStart"/>
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnGenitourinarySystemSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnRespiratorySystemSymptoms"
-                    android:text="@string/genitourinary_system_symptoms_button"
-                    android:textAlignment="viewStart"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnGastrointestinalSystemSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnGenitourinarySystemSymptoms"
-                    android:text="@string/gastrointestinal_system_symptoms_button"
-                    android:textAlignment="viewStart"/>
+                android:id="@+id/btnCardiovascular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/cardiovascular_system_button"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGeneralSymptoms" />
+
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnLocomotorSystemSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnGastrointestinalSystemSymptoms"
-                    android:text="@string/locomotor_system_symptoms_button" android:textAlignment="viewStart"
-            />
+                android:id="@+id/btnRespiratorySystemSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/respiratory_system_symptoms_button"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNoseSymptoms" />
+
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnNervousSystem" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnLocomotorSystemSymptoms"
-                    android:text="@string/nervous_system_symptoms_button" android:textAlignment="viewStart"
-            />
+                android:id="@+id/btnGastrointestinalSystemSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/gastrointestinal_system_symptoms_button"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGenitourinarySystemSymptoms" />
+
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round_btn"
-                    android:id="@+id/btnPsycheSymptoms" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toBottomOf="@+id/btnLocomotorSystemSymptoms"
-                    android:text="@string/psyche_symptoms_button" android:textAlignment="viewStart"
-            />
+                android:id="@+id/btnGenitourinarySystemSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/genitourinary_system_symptoms_button"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRespiratorySystemSymptoms" />
+
+            <Button
+                android:id="@+id/btnSupLocomotor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/superior_locomotor_system_button"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCardiovascular" />
+
+            <Button
+                android:id="@+id/btnInfLocomotor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/inferior_locomotor_system_button"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSupLocomotor" />
+
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

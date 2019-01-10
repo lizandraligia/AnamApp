@@ -25,17 +25,9 @@
 
     <string name="finish_symptoms_button">FINALIZAR SINTOMAS</string>
     <string name="general_symptoms_button">SINTOMAS GERAIS</string>
-    <string name="head_and_neck_symptoms_button">CABEÇA E PESCOÇO</string>
-    <string name="eyes_symptoms_button">OLHOS</string>
-    <string name="ears_symptoms_button">ORELHAS</string>
-    <string name="nose_symptoms_button">NARIZ</string>
     <string name="respiratory_system_symptoms_button">SISTEMA RESPIRATÓRIO</string>
-    <string name="circulatory_system_symptoms_button">SISTEMA CIRCULATORIO</string>
     <string name="gastrointestinal_system_symptoms_button">SISTEMA GASTRO-INTESTINAL</string>
     <string name="genitourinary_system_symptoms_button">SISTEMA GÊNITO-URINÁRIO</string>
-    <string name="locomotor_system_symptoms_button">SISTEMA LOCOMOTOR</string>
-    <string name="nervous_system_symptoms_button">SISTEMA NERVOSO</string>
-    <string name="psyche_symptoms_button">PSÍQUICO</string>
     <string name="num_prontuario">Nº Prontuário</string>
     <string name="patient_name">NOME DO PACIENTE</string>
     <string name="birthday">DataNasc</string>
@@ -77,4 +69,7 @@
     <string name="user_already_exists">E-mail já cadastrado</string>
 
     <string name="weak_pass">Senha fraca</string>
+    <string name="cardiovascular_system_button">SISTEMA CARDIOVASCULAR</string>
+    <string name="superior_locomotor_system_button">SISTEMA LOCOMOTOR SUPERIOR</string>
+    <string name="inferior_locomotor_system_button">SISTEMA LOCOMOTOR INFERIOR</string>
 </resources>

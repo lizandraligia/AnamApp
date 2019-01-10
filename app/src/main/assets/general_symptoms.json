@@ -1,9 +1,17 @@
 {
-  "Diarréia": "checkbox",
-  "Febre": "checkbox",
-  "Alergia": "checkbox",
-  "Tosse": "checkbox",
-  "Febre Amarela": "checkbox",
-  "SHOW DE BOLA": "checkbox",
+  "Bom": "checkbox",
+  "Regular": "checkbox",
+  "Ruim": "checkbox",
+
+  "Consciente/Orientado": "checkbox",
+  "Confuso/Desorientado": "checkbox",
+
+  "Normocorado": "checkbox",
+  "Ictérico": "checkbox",
+  "Pálido": "checkbox",
+
+  "Hipotérmico": "checkbox",
+  "Normotérmico": "checkbox",
+  "Febril": "checkbox",
   "Informações adicionais": "text"
 }
