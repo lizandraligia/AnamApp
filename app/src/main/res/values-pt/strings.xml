@@ -64,10 +64,17 @@
     <string name="register_patient_button_registrate">Registrar</string>
 
 
-    <string name="email_or_password_invalids">Endereço de email inválido ou senhas não coincidem</string>
+    <string name="password_invalids">Senhas não coincidem</string>
 
     <string name="sign_up_password">Senha</string>
     <string name="sign_up_confirm_password">Confirmação de senha</string>
 
     <string name="authentication_failed">Falha de autenticação</string>
+
+    <string name="cannot_be_empty">Esse campo não pode ser nulo</string>
+    <string name="invalid_email">Endereço de e-mail inválido</string>
+
+    <string name="user_already_exists">E-mail já cadastrado</string>
+
+    <string name="weak_pass">Senha fraca</string>
 </resources>

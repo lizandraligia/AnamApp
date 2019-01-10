@@ -4,16 +4,19 @@ import anamapp.project.R
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import java.lang.IllegalStateException
+import android.widget.ProgressBar
 import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mAuth: FirebaseAuth
+
     override fun onClick(v: View?) {
         if (v == login_button_enter) {
 
@@ -38,7 +41,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             val intent = Intent(applicationContext, SignUpActivity::class.java)
             startActivity(intent)
         }
-
 
 
         mAuth = FirebaseAuth.getInstance()
@@ -82,7 +84,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
 
 
-        // [START sign_in_with_email]
+        progressBar.visibility = View.VISIBLE
+
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -92,13 +95,17 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")
                     val intent = Intent(applicationContext, MenuActivity::class.java)
+                    progressBar.visibility = View.GONE
                     startActivity(intent)
+
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(
                         baseContext, getString(R.string.authentication_failed),
                         Toast.LENGTH_SHORT
                     ).show()
+
+                    progressBar.visibility = View.GONE
 
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")
@@ -113,18 +120,23 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     fun validateForm(email: String, password: String): Boolean {
         var aux: Boolean = false
 
-        if (email.equals("") || password.equals("")) {
-            return aux
+        if (password.equals("")) {
+            if(password.equals("")) {
+                login_edit_text_password.setError(getString(R.string.cannot_be_empty))
+                login_edit_text_password.requestFocus()
+            }
+
+        }else {
+            aux = true
         }
 
 
-        val p = Pattern.compile(".+@.+\\.[a-z]+")
-        val m = p.matcher(email)
-        val matchFound = m.matches()
 
-        if (!matchFound) {
-
-            Toast.makeText(this, getString(R.string.email_or_password_invalids), Toast.LENGTH_LONG).show()
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches() || !aux) {
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                login_edit_text_login.setError(getString(R.string.invalid_email))
+                login_edit_text_login.requestFocus()
+            }
             aux = false
         } else {
             aux = true

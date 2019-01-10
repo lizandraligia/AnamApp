@@ -71,17 +71,26 @@
     <string name="profile">Hospital Info</string>
 
 
+    <string name="cannot_be_empty">This field can\'t be blank</string>
+
+    <string name="invalid_email">Invalid e-mail address</string>
 
 
 
 
-    <string name="email_or_password_invalids">E-mail address invalid or passwords doesn\'t matches</string>
+
+
+    <string name="password_invalids">Passwords doesn\'t matches</string>
 
     <string name="email_hint" translatable="false">E-mail</string>
     <string name="sign_up_password">Password</string>
     <string name="sign_up_confirm_password">Confirm password</string>
 
     <string name="authentication_failed">Authentication Failed</string>
+
+    <string name="user_already_exists">E-mail already registered</string>
+
+    <string name="weak_pass">Weak password</string>
 
 
 
