@@ -1,4 +1,9 @@
 {
-  "Febre 2": "checkbox",
-  "Alergia 2": "checkbox"
+  "Polaciuria": "checkbox",
+  "Polyuria": "checkbox",
+  "Oliguria": "checkbox",
+  "Anuria": "checkbox",
+  "Nocturia": "checkbox",
+  "Hematuria": "checkbox",
+  "Dysuria": "checkbox"
 }

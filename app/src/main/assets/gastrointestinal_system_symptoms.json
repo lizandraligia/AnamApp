@@ -1,4 +1,18 @@
 {
-  "Febre 2": "checkbox",
-  "Alergia 2": "checkbox"
+  "Abdomen": "none",
+  "Flaccid": "checkbox",
+  "Globose": "checkbox",
+
+  "Rigid": "checkbox",
+  "Depressive": "checkbox",
+
+  "Painful": "checkbox",
+  "Painless": "checkbox",
+
+
+  "Excreta": "none",
+  "Hardened": "checkbox",
+  "Softened": "checkbox",
+  "Pasty": "checkbox",
+  "Additional Information": "text"
 }

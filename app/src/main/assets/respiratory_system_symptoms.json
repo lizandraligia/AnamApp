@@ -1,4 +1,7 @@
 {
-  "Febre 2": "checkbox",
-  "Alergia 2": "checkbox"
+  "Tachypnea": "checkbox",
+  "Normopnea": "checkbox",
+  "Bradipnéia": "checkbox",
+  "Tachidispnea": "checkbox",
+  "Additional Information": "text"
 }

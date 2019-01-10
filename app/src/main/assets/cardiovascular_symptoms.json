@@ -1,4 +1,22 @@
 {
-  "Febre 2": "checkbox",
-  "Alergia 2": "checkbox"
+  "Hypotensive": "checkbox",
+  "Normotensive": "checkbox",
+  "Hypertensive": "checkbox",
+
+  "Tachycardic": "checkbox",
+  "Normocardial": "checkbox",
+  "Bradycardic": "checkbox",
+
+  "Taquisfigmia ": "checkbox",
+  "Normosfigmia": "checkbox",
+  "Bradisfigmia": "checkbox",
+
+  "With blow": "checkbox",
+  "Without blow": "checkbox",
+
+  "Pulse":"none",
+  "Full": "checkbox",
+  "Filiform": "checkbox",
+  "Weak": "checkbox",
+  "Additional Information": "text"
 }

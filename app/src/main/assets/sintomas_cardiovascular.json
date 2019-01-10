@@ -1,0 +1,22 @@
+{
+  "Hipotenso": "checkbox",
+  "Normotenso": "checkbox",
+  "Hipertenso": "checkbox",
+
+  "Taquicárdico": "checkbox",
+  "Normocárdico": "checkbox",
+  "Bradicárdico": "checkbox",
+
+  "Taquisfigmia ": "checkbox",
+  "Normosfigmia": "checkbox",
+  "Bradisfigmia": "checkbox",
+
+  "Com sopro": "checkbox",
+  "Sem sopro": "checkbox",
+
+  "Pulso":"none",
+  "Cheio": "checkbox",
+  "Filiforme": "checkbox",
+  "Fraco": "checkbox",
+  "Informação Adicional": "text"
+}

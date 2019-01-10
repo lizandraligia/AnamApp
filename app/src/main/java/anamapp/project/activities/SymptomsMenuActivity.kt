@@ -8,6 +8,7 @@ import android.content.Intent
 import kotlinx.android.synthetic.main.activity_symptoms_menu.*
 import org.json.JSONArray
 import org.json.JSONObject
+import java.util.*
 
 class SymptomsMenuActivity : AppCompatActivity() {
 
@@ -33,9 +34,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             intent.putExtra(Constant.SYMPTOM, btnGeneralSymptoms.text.toString())
 
             try {
-                val inputStream = assets.open("general_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("sintomas_gerais.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("general_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -51,9 +58,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("suplocomotor_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("suplocomotor_sintomas.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("suplocomotor_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -68,9 +81,16 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("inflocomotor_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("inflocomotor_sintomas.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("inflocomotor_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -86,9 +106,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("respiratory_system_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("sistema_respiratorio_sintomas.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("respiratory_system_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -103,9 +129,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("genitourinary_system_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("sistema_genitourinario_sintomas.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("genitourinary_system_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -120,9 +152,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("gastrointestinal_system_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("sistema_gastrointestinal_sintomas.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("gastrointestinal_system_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -137,9 +175,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                val inputStream = assets.open("cardiovascular_symptoms.json")
-                val jsonString = inputStream.bufferedReader().use { it.readText() }
-                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                if(Locale.getDefault().toString() == "pt_BR" ) {
+                    val inputStream = assets.open("sintomas_cardiovascular.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                } else {
+                    val inputStream = assets.open("cardiovascular_symptoms.json")
+                    val jsonString = inputStream.bufferedReader().use { it.readText() }
+                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener

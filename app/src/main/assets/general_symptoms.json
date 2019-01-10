@@ -1,17 +1,17 @@
 {
-  "Bom": "checkbox",
-  "Regular": "checkbox",
-  "Ruim": "checkbox",
+  "Good": "checkbox",
+  "Average": "checkbox",
+  "Bad": "checkbox",
 
-  "Consciente/Orientado": "checkbox",
-  "Confuso/Desorientado": "checkbox",
+  "Aware/Oriented": "checkbox",
+  "Disturbed/Disoriented": "checkbox",
 
-  "Normocorado": "checkbox",
-  "Ictérico": "checkbox",
-  "Pálido": "checkbox",
+  "Normocorated": "checkbox",
+  "Icteric": "checkbox",
+  "Pale": "checkbox",
 
-  "Hipotérmico": "checkbox",
-  "Normotérmico": "checkbox",
-  "Febril": "checkbox",
-  "Informações adicionais": "text"
+  "Hypothermic": "checkbox",
+  "Normothermic": "checkbox",
+  "Feverish": "checkbox",
+  "Additional Information": "text"
 }

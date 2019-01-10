@@ -1,4 +1,8 @@
 {
-  "Febre 2": "checkbox",
-  "Alergia 2": "checkbox"
+  "Edema in Right Member": "checkbox",
+  "Edema in Left Member": "checkbox",
+  "Right Vein Peripheral Access": "checkbox",
+  "Left Vein Peripheral Access": "checkbox",
+  "Right Member Pain": "checkbox",
+  "Left Member Pain": "checkbox"
 }
