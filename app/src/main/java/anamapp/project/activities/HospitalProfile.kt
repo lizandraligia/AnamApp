@@ -16,5 +16,9 @@ class HospitalProfile : AppCompatActivity() {
             val intent = Intent(applicationContext, ListNursesActivity::class.java)
             startActivity(intent)
         }
+
+        menu_image_view_back.setOnClickListener {
+            finish()
+        }
     }
 }

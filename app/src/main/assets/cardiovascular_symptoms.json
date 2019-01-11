@@ -14,9 +14,8 @@
   "With blow": "checkbox",
   "Without blow": "checkbox",
 
-  "Pulse":"none",
-  "Full": "checkbox",
-  "Filiform": "checkbox",
-  "Weak": "checkbox",
+  "Full Pulse": "checkbox",
+  "Filiform Pulse": "checkbox",
+  "Weak Pulse": "checkbox",
   "Additional Information": "text"
 }

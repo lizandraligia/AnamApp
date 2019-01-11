@@ -1,7 +1,6 @@
 {
-  "Abdômen": "none",
-  "Flácido": "checkbox",
-  "Globoso": "checkbox",
+  "Abdômen Flácido": "checkbox",
+  "Abdômen Globoso": "checkbox",
 
   "Rígido": "checkbox",
   "Depressivo": "checkbox",
@@ -9,10 +8,8 @@
   "Doloroso": "checkbox",
   "Indolor": "checkbox",
 
-
-  "Fezes": "none",
-  "Endurecida": "checkbox",
-  "Amolecida": "checkbox",
-  "Pastosa": "checkbox",
+  "Fezes Endurecida": "checkbox",
+  "Fezes Amolecida": "checkbox",
+  "Fezes Pastosa": "checkbox",
   "Informação Adicional": "text"
 }

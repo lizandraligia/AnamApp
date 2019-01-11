@@ -14,9 +14,8 @@
   "Com sopro": "checkbox",
   "Sem sopro": "checkbox",
 
-  "Pulso":"none",
-  "Cheio": "checkbox",
-  "Filiforme": "checkbox",
-  "Fraco": "checkbox",
+  "Pulso Cheio": "checkbox",
+  "Pulso Filiforme": "checkbox",
+  "Pulso Fraco": "checkbox",
   "Informação Adicional": "text"
 }

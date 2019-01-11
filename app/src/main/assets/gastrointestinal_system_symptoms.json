@@ -1,7 +1,6 @@
 {
-  "Abdomen": "none",
-  "Flaccid": "checkbox",
-  "Globose": "checkbox",
+  "Flaccid Abdomen": "checkbox",
+  "Globose Abdomen": "checkbox",
 
   "Rigid": "checkbox",
   "Depressive": "checkbox",
@@ -9,10 +8,8 @@
   "Painful": "checkbox",
   "Painless": "checkbox",
 
-
-  "Excreta": "none",
-  "Hardened": "checkbox",
-  "Softened": "checkbox",
-  "Pasty": "checkbox",
+  "Hardened Excreta": "checkbox",
+  "Softened Excreta": "checkbox",
+  "Pasty Excreta": "checkbox",
   "Additional Information": "text"
 }

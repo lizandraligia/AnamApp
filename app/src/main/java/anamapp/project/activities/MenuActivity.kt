@@ -19,7 +19,7 @@ class MenuActivity: AppCompatActivity(){
         }
 
         btnRegPaciente.setOnClickListener {
-            val intent = Intent(applicationContext, SymptomsMenuActivity::class.java)
+            val intent = Intent(applicationContext, RegisterPatientActivity::class.java)
             startActivity(intent)
         }
 
