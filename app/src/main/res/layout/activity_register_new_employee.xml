@@ -41,13 +41,14 @@
             android:layout_width="0dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText" android:layout_marginStart="8dp"
+            android:id="@+id/reg_nurse_coren" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvRegistNurse" android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="50dp"
             android:hint="@string/coren"
             android:textColorHint="@color/colorPrimary"
-    />
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/reg_nurse_name"/>
     <EditText
 
             android:background="@drawable/round_et"
@@ -55,10 +56,10 @@
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText2" android:layout_marginEnd="8dp"
+            android:id="@+id/reg_nurse_email" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText" android:hint="@string/login_hint_login"
+            app:layout_constraintTop_toBottomOf="@+id/reg_nurse_coren" android:hint="@string/email_hint"
             android:textColorHint="@color/colorPrimary"/>
     <EditText
             android:background="@drawable/round_et"
@@ -66,10 +67,10 @@
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText3" android:layout_marginStart="8dp"
+            android:id="@+id/reg_nurse_pass" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/reg_nurse_email"
             android:hint="@string/login_hint_password"
             android:textColorHint="@color/colorPrimary"
     />
@@ -78,12 +79,46 @@
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:background="@drawable/round_btn"
-            android:id="@+id/button3" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/reg_nurse_button" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/reg_nurse_pass" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="1.0" android:textSize="14sp"
             />
+    <EditText
+            android:background="@drawable/round_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/reg_nurse_confirmPass" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            android:textColorHint="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/reg_nurse_pass" android:hint="@string/sign_up_confirm_password"/>
+    <EditText
+            android:background="@drawable/round_et"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/reg_nurse_name"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegistNurse" android:hint="@string/name_nurse"/>
+    <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar3"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </android.support.constraint.ConstraintLayout>

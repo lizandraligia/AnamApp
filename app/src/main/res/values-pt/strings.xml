@@ -75,4 +75,6 @@
 
 
     <string name="authentication_sucessfull"> Autenticado com sucesso</string>
+
+    <string name="name_nurse">Nome</string>
 </resources>

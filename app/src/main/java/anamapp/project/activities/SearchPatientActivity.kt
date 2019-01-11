@@ -16,7 +16,7 @@ class SearchPatientActivity : AppCompatActivity() {
         search_patient_button_search.setOnClickListener {
             val medical_record = search_patient_edit_text_patient_number.text.toString()
 
-            PatientSearchResult.patient = Patient("Jonas Freire de Alcantara Marques de Barros", medical_record, "09/08/1935", "98765-1423", 47)
+            //PatientSearchResult.patient = Patient("Jonas Freire de Alcantara Marques de Barros", medical_record, "09/08/1935", "98765-1423", 47)
 
             val intent = Intent(this, PatientActivity::class.java)
             startActivity(intent)

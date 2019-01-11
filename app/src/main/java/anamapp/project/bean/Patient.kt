@@ -6,18 +6,14 @@ package anamapp.project.bean
 
  */
 
-class Patient(  name : String,
-                medical_record : String,
-                birth_date : String,
-                fone : String,
-                age : Int ) {
+class Patient(  val name : String,
+                val medical_record : String,
+                val birth_date : String,
+                val fone : String,
+                val age : Int,
+                val corenNurseID: String) {
 
 
 
-    var name = name
-    var medical_record = medical_record
-    var birth_date = birth_date
-    var fone = fone
-    var age = age
 
 }

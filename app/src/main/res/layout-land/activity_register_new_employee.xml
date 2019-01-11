@@ -8,6 +8,17 @@
         android:background="@drawable/gradient_background"
         tools:context=".activities.registerNewEmployeeActivity">
 
+    <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar3"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     <ImageView android:layout_width="33dp" android:layout_height="31dp" android:src="?attr/actionModeCloseDrawable"
                android:id="@+id/menu_image_view_back6" android:layout_marginTop="8dp"
                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +54,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/tvRegistNurse" app:layout_constraintHorizontal_bias="0.0"
             android:id="@+id/scrollView3" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/button3">
+            app:layout_constraintBottom_toTopOf="@+id/reg_nurse_button">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
             <EditText
@@ -51,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText" android:layout_marginStart="8dp"
+                    android:id="@+id/reg_nurse_coren" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tvRegistNurse" android:layout_height="50dp"
@@ -65,10 +76,10 @@
                     android:layout_height="50dp"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText2" android:layout_marginEnd="8dp"
+                    android:id="@+id/reg_nurse_email" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/editText" android:hint="@string/login_hint_login"
+                    app:layout_constraintTop_toBottomOf="@+id/reg_nurse_coren" android:hint="@string/login_hint_login"
                     android:textColorHint="@color/colorPrimary"/>
             <EditText
                     android:background="@drawable/round_et"
@@ -76,10 +87,10 @@
                     android:layout_height="50dp"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText3" android:layout_marginStart="8dp"
+                    android:id="@+id/reg_nurse_pass" android:layout_marginStart="8dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/editText2"
+                    app:layout_constraintTop_toBottomOf="@+id/reg_nurse_email"
                     android:hint="@string/login_hint_password"
                     android:textColorHint="@color/colorPrimary"
             />
@@ -90,7 +101,7 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:background="@drawable/round_btn"
-            android:id="@+id/button3"
+            android:id="@+id/reg_nurse_button"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"

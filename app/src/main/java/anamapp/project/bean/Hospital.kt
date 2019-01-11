@@ -1,12 +1,14 @@
 package anamapp.project.bean
 
-class Hospital(
-    hospitalName: String,
-    hospitalCity: String,
-    hospitalState: String,
-    hospitalAddress: String,
-    hospitalEmailID: String// vou usar isso como o ID, emails são únicos e tal.
+class Hospital(val id: String = "",
+               val name: String = "",
+               val city: String = "",
+               val address: String = "",
+               val email: String = ""
+
+)
+
+{
 
 
-) {
 }
