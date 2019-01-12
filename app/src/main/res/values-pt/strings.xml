@@ -77,4 +77,11 @@
     <string name="authentication_sucessfull"> Autenticado com sucesso</string>
 
     <string name="name_nurse">Nome</string>
+    <string name="suplocomotor_symptoms_filename">suplocomotor_sintomas.json</string>
+    <string name="respiratory_system_symptoms_filename">sistema_respiratorio_sintomas.json</string>
+    <string name="inflocomotor_symptoms_filename">inflocomotor_sintomas.json</string>
+    <string name="genitourinary_system_symptoms_filename">sistema_genitourinario_sintomas.json</string>
+    <string name="general_symptoms_filename">sintomas_gerais.json</string>
+    <string name="gastrointestinal_system_symptoms_filename">sistema_gastrointestinal_sintomas.json</string>
+    <string name="cardiovascular_symptoms_filename">sintomas_cardiovascular.json</string>
 </resources>

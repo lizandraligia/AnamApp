@@ -92,6 +92,13 @@
     <string name="name_nurse">Name</string>
 
 
-
+    <!-- Filenames in your respectively language -->
+    <string name="cardiovascular_symptoms_filename">cardiovascular_symptoms.json</string>
+    <string name="gastrointestinal_system_symptoms_filename">gastrointestinal_system_symptoms.json</string>
+    <string name="general_symptoms_filename">general_symptoms.json</string>
+    <string name="genitourinary_system_symptoms_filename">genitourinary_system_symptoms.json</string>
+    <string name="inflocomotor_symptoms_filename">inflocomotor_symptoms.json</string>
+    <string name="respiratory_system_symptoms_filename">respiratory_system_symptoms.json</string>
+    <string name="suplocomotor_symptoms_filename">suplocomotor_symptoms.json</string>
 
 </resources>

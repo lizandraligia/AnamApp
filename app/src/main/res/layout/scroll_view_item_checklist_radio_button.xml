@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/checklist_item_linear_layout"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+
+    <TextView
+            android:id="@+id/checklist_item_radio_group_text_view_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LABEL"
+            android:gravity="left|center"
+            android:layout_weight="1"/>
+
+
+    <RadioGroup
+            android:id="@+id/checklist_item_radio_group_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:layout_weight="1">
+
+
+        <!--
+        <RadioButton
+                android:text="Radio button with text very very really really and big to much"
+                android:textColor="@color/colorText"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"/>
+        -->
+
+
+
+    </RadioGroup>
+
+    <View
+            android:id="@+id/checklist_item_radio_group_divisor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black"
+            android:layout_weight="1"
+            android:visibility="visible"/>
+
+</LinearLayout>

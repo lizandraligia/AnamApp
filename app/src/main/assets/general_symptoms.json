@@ -3,6 +3,9 @@
   "Average": "checkbox",
   "Bad": "checkbox",
 
+  "TEST": "radio_group",
+  "radio_groupTEST": {"Good": "", "Average": "", "Bad": ""},
+
   "Aware/Oriented": "checkbox",
   "Disturbed/Disoriented": "checkbox",
 

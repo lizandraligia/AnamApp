@@ -18,6 +18,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var mAuth: FirebaseAuth
 
     override fun onClick(v: View?) {
+
+        val intent = Intent(applicationContext, MenuActivity::class.java)
+
+        progressBar.visibility = View.GONE
+        startActivity(intent)
+
+        /*
         if (v == login_button_enter) {
 
             try {
@@ -26,7 +33,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }catch(e: IllegalStateException) {
                 signIn()
             }
-        }
+        }*/
     }
 
 

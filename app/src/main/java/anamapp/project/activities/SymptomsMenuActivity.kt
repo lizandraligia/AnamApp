@@ -34,15 +34,16 @@ class SymptomsMenuActivity : AppCompatActivity() {
             intent.putExtra(Constant.SYMPTOM, btnGeneralSymptoms.text.toString())
 
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("sintomas_gerais.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("general_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.general_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -58,15 +59,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("suplocomotor_sintomas.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("suplocomotor_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.suplocomotor_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -81,15 +82,14 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("inflocomotor_sintomas.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("inflocomotor_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.inflocomotor_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
 
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -106,15 +106,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("sistema_respiratorio_sintomas.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("respiratory_system_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.respiratory_system_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -129,15 +129,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("sistema_genitourinario_sintomas.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("genitourinary_system_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.genitourinary_system_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -152,15 +152,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("sistema_gastrointestinal_sintomas.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("gastrointestinal_system_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.gastrointestinal_system_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
@@ -175,15 +175,15 @@ class SymptomsMenuActivity : AppCompatActivity() {
             // Input method of data, may be changed to database source or remote base
             // i choice local files for tests
             try {
-                if(Locale.getDefault().toString() == "pt_BR" ) {
-                    val inputStream = assets.open("sintomas_cardiovascular.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                } else {
-                    val inputStream = assets.open("cardiovascular_symptoms.json")
-                    val jsonString = inputStream.bufferedReader().use { it.readText() }
-                    intent.putExtra(Constant.JSON_SCREEN, jsonString)
-                }
+
+                // The system now read the filename from the resource string
+                // because he gets the filename with respect to the actual language
+
+                val filename = getString(R.string.cardiovascular_symptoms_filename)
+                val inputStream = assets.open(filename)
+                val jsonString = inputStream.bufferedReader().use { it.readText() }
+                intent.putExtra(Constant.JSON_SCREEN, jsonString)
+
             } catch (e: Exception) {
                 e.printStackTrace()
                 return@setOnClickListener
