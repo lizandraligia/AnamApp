@@ -15,7 +15,6 @@
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="4:1"
             android:layout_gravity="center"
-            android:background="@drawable/gradient_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/logo" android:layout_marginTop="16dp"/>
@@ -56,7 +55,7 @@
         android:layout_marginTop="42dp"
         android:background="@drawable/round_et"
         android:hint="@string/login_hint_password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColorHint="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="@+id/login_edit_text_login"
         app:layout_constraintStart_toStartOf="@+id/login_edit_text_login"

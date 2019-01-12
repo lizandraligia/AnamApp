@@ -1,22 +1,37 @@
 package anamapp.project.activities
 
 import anamapp.project.R
+import anamapp.project.adapter.NurseAdapter
+import anamapp.project.bean.Hospital
+import anamapp.project.bean.Nurse
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_listnurses_nurses.*
 
 class ListNursesActivity : Activity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
+    private lateinit var adapter: NurseAdapter
 
-    val myDataSet = arrayOf("Maria Menezes", "Cristiana Soares", "Rômulo Dias", "Marcos Antonio", "Angela lucena"
-    , "Andreia Nascimento", "Joana Lins", "Cristiane Dias", "João Marcos", "Eliane Oliveira", "Carla Mendes", "André Peixoto",
-        "Luana Marques", "Andreia Martins", "Mariana Gomes", "Alex Teixeira", "Maria Celia", "Nataly Spindola", "Raul Borba")
+    lateinit var databaseNurse: DatabaseReference
+    lateinit var dataBaseHospital: DatabaseReference
+    lateinit var mAuth: FirebaseAuth
+
+
+
+    var list: ArrayList<Hospital> = ArrayList<Hospital>()
+
+    var listNurse: ArrayList<Nurse> = ArrayList<Nurse>()
+
+    companion object {
+        var ID = ""
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,25 +47,102 @@ class ListNursesActivity : Activity() {
             startActivity(intent)
         }
 
-        viewManager = LinearLayoutManager(this)
-        viewAdapter = CustomAdapter(this.myDataSet)
+        mAuth = FirebaseAuth.getInstance()
 
-        recyclerView = findViewById<RecyclerView>(R.id.recyclerViewNurse).apply {
-            // use this setting to improve performance if you know that changes
-            // in content do not change the layout size of the RecyclerView
-            setHasFixedSize(true)
+        recyclerView = findViewById(R.id.recyclerViewNurse)
 
-            // use a linear layout manager
-            layoutManager = viewManager
+        recyclerView.setHasFixedSize(true)
 
-            // specify an viewAdapter (see also next example)
-            adapter = viewAdapter
-        }
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        adapter = NurseAdapter(this, listNurse)
 
 
+
+
+        recyclerView.adapter = adapter
+
+        dataBaseHospital = FirebaseDatabase.getInstance().getReference("hospital")
+        databaseNurse = FirebaseDatabase.getInstance().getReference("nurses")
+
+
+        dataBaseHospital.addListenerForSingleValueEvent(eventListenerAux)
 
 
     }
 
 
+    override fun onDestroy() {
+        super.onDestroy()
+
+        databaseNurse.removeEventListener(valueEventListener)
+        dataBaseHospital.removeEventListener(eventListenerAux)
+    }
+
+
+
+    var eventListenerAux = object : ValueEventListener {
+        override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+            list.clear()
+            for (hospitalSnapshot in dataSnapshot.children) {
+                var hospital = hospitalSnapshot.getValue(Hospital::class.java)
+
+                list.add(hospital!!)
+
+                var email = ""
+                val user = mAuth.currentUser
+                user?.let {
+                    email = user.email!!
+                }
+                for (hospital in list) {
+                    if (hospital.email == email) {
+                        ID = hospital.id
+                        databaseNurse.addValueEventListener(valueEventListener)
+                        break
+                    }
+                }
+
+            }
+
+        }
+
+        override fun onCancelled(databaseError: DatabaseError) {
+            //TODO
+        }
+
+    }
+
+
+
+    var valueEventListener = object : ValueEventListener {
+        override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+            if (dataSnapshot.exists()) {
+                listNurse.clear()
+                for (nurseSnapshot in dataSnapshot.child(ID).children) {
+                    var nurse = nurseSnapshot.getValue(Nurse::class.java)
+
+                    listNurse.add(nurse!!)
+
+
+                }
+                adapter.notifyDataSetChanged()
+            }
+
+        }
+
+        override fun onCancelled(databaseError: DatabaseError) {
+            //TODO
+        }
+    }
+
+
+
+
+
 }
+
+
+
+

@@ -1,13 +1,20 @@
 package anamapp.project.bean
 
-class Nurse(
-    val id: String,
-    val NurseName: String = "",
-    val NurseCoren: String = "",
-    val hospitalEmail: String= ""// vou usar isso como o ID, emails são únicos e tal.
+
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 
 
-) {
+class Nurse(var id: String = "", var nurseName: String = "", var nurseCoren: String = "", var email: String = "",
+            var image: String = "") {
 
 
 }
+
+
+
+
+
+
+
+
