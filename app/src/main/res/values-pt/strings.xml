@@ -34,11 +34,11 @@
     <string name="phone">Telefone</string>
     <string name="symptons">SINTOMAS</string>
     <string name="age">Idade</string>
-    <string name="hopital_name">Nome do Hospital</string>
-    <string name="city">Cidade</string>
-    <string name="state">Estado</string>
-    <string name="coren">COREN</string>
-    <string name="address">"Endereço "</string>
+    <string name="hopital_name">Nome:</string>
+    <string name="city">Cidade:</string>
+    <string name="state">Estado:</string>
+    <string name="coren">COREN:</string>
+    <string name="address">"Endereço:"</string>
     <string name="register_nurse">Cadastrar Enfermeiro</string>
     <string name="register_hospital">Cadastrar Hospital</string>
     <string name="btn_create_account">Criar Conta</string>

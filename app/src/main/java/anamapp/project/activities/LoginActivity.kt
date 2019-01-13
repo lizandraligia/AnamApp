@@ -2,6 +2,8 @@ package anamapp.project.activities
 
 import anamapp.project.R
 import anamapp.project.bean.App
+import anamapp.project.bean.Hospital
+import anamapp.project.bean.Nurse
 import anamapp.project.bean.prefs
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -11,8 +13,10 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-
-
+import com.google.firebase.internal.FirebaseAppHelper.getUid
+import com.google.firebase.auth.FirebaseUser
+import android.support.annotation.NonNull
+import com.google.firebase.database.*
 
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
@@ -23,6 +27,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     private var myPreferences = "myPrefs"
 
     lateinit var mAuth: FirebaseAuth
+
+    lateinit var query: Query
 
     override fun onClick(v: View?) {
 /*
@@ -37,7 +43,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             try {
 
                 signIn(login_edit_text_login.text.toString(), login_edit_text_password.text.toString())
-            }catch(e: IllegalStateException) {
+            } catch (e: IllegalStateException) {
                 signIn()
             }
         }
@@ -56,6 +62,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             val intent = Intent(applicationContext, SignUpActivity::class.java)
             startActivity(intent)
         }
+
+        mAuth.addAuthStateListener(authListener)
+
+
 
 
 
@@ -76,6 +86,47 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         signOut()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        mAuth.removeAuthStateListener(authListener)
+        query.removeEventListener(valueEventListener)
+    }
+
+    var valueEventListener = object : ValueEventListener {
+        override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+            if (dataSnapshot.exists()) {
+                for (nurseSnapshot in dataSnapshot.children) {
+                    var hospital = nurseSnapshot.getValue(Hospital::class.java)
+                    prefs.hospitalName = hospital!!.name
+                    prefs.address = hospital!!.address
+                    prefs.city = hospital!!.city
+                    prefs.state = hospital!!.state
+
+
+                }
+            }
+
+        }
+
+        override fun onCancelled(databaseError: DatabaseError) {
+            //TODO
+        }
+    }
+
+
+    var authListener: FirebaseAuth.AuthStateListener =
+        FirebaseAuth.AuthStateListener { firebaseAuth ->
+            val firebaseUser = firebaseAuth.currentUser
+            if (firebaseUser != null) {
+
+                prefs.uid = firebaseUser!!.uid
+                prefs.email = firebaseUser.email!!.toString()
+            }
+
+            query = FirebaseDatabase.getInstance().getReference("hospital").orderByChild("email").equalTo(prefs.email)
+            query.addValueEventListener(valueEventListener)
+        }
 
 
     /* Save data through rotations */
@@ -100,10 +151,12 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         login_edit_text_password.setText(password)
     }
 
-     private fun signOut() {
+
+    private fun signOut() {
         mAuth.signOut()
 
     }
+
     private fun signIn(email: String = "", password: String = "") {
         if (!validateForm(email, password)) {
             return
@@ -117,8 +170,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     val user = mAuth.currentUser
-                    prefs.uid = user!!.uid
-                    prefs.email = user.email!!.toString()
+
                     //updateUI(user)
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")
@@ -150,19 +202,19 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         var aux: Boolean = false
 
         if (password.equals("")) {
-            if(password.equals("")) {
+            if (password.equals("")) {
                 login_edit_text_password.setError(getString(R.string.cannot_be_empty))
                 login_edit_text_password.requestFocus()
             }
 
-        }else {
+        } else {
             aux = true
         }
 
 
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches() || !aux) {
-            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 login_edit_text_login.setError(getString(R.string.invalid_email))
                 login_edit_text_login.requestFocus()
             }

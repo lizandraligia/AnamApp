@@ -1,6 +1,7 @@
 package anamapp.project.activities
 
 import anamapp.project.R
+import anamapp.project.bean.prefs
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -20,5 +21,10 @@ class HospitalProfile : AppCompatActivity() {
         menu_image_view_back.setOnClickListener {
             finish()
         }
+
+        tvAddressHospital.text = prefs.address
+        tvCityHospital.text = prefs.city
+        tvNameHospital.text = prefs.hospitalName
+        tvStateHospital.text = prefs.state
     }
 }

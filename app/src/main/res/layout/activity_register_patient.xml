@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginBottom="16dp"
-                android:background="@color/white"
+                android:background="@drawable/round_et"
                 android:hint="@string/register_patient_hint_name" android:id="@+id/register_patient_edit_text_name"/>
 
         <EditText

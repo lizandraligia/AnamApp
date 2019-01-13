@@ -49,11 +49,11 @@
     <string name="phone">Phone</string>
     <string name="symptons">SYMPTONS</string>
     <string name="age">Age</string>
-    <string name="hopital_name">Hospital Name</string>
-    <string name="city">City</string>
-    <string name="state">State</string>
-    <string name="coren">COREN</string>
-    <string name="address">Address</string>
+    <string name="hopital_name">Name:</string>
+    <string name="city">City:</string>
+    <string name="state">State:</string>
+    <string name="coren">COREN:</string>
+    <string name="address">Address:</string>
     <string name="register_nurse">Register Nurse</string>
     <string name="register_hospital">Register Hospital</string>
     <string name="btn_create_account">Create Account</string>
