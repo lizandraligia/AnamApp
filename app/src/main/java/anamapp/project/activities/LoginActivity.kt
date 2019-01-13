@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 import com.google.firebase.internal.FirebaseAppHelper.getUid
 import com.google.firebase.auth.FirebaseUser
 import android.support.annotation.NonNull
+import com.google.firebase.auth.FirebaseAuthProvider
 import com.google.firebase.database.*
 
 
@@ -164,6 +165,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
 
         progressBar.visibility = View.VISIBLE
+
+
 
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->

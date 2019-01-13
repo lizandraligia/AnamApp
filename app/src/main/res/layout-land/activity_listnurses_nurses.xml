@@ -10,7 +10,7 @@
 
     <android.support.v7.widget.RecyclerView
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="241dp"
             android:id="@+id/recyclerViewNurse"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/tvEmployeeList" app:layout_constraintStart_toStartOf="parent"
@@ -21,17 +21,17 @@
     </android.support.v7.widget.RecyclerView>
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="49dp"
             android:id="@+id/tvEmployeeList"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:textSize="30sp" android:textColor="@color/white" android:layout_marginTop="132dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.457"
+            android:textSize="30sp" android:textColor="@color/white" android:layout_marginTop="72dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.449"
             android:text="@string/tv_employee_list" android:textStyle="bold"/>
     <Button
             android:text="@string/btn_register_new_nurses"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:id="@+id/btnRegisterNewNurses" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/round_btn"
@@ -40,11 +40,12 @@
             app:layout_constraintVertical_bias="1.0" android:textSize="14sp"/>
     <ImageView
             android:layout_width="0dp"
-            android:layout_height="106dp" android:src="@mipmap/logo"
+            android:layout_height="57dp" android:src="@mipmap/logo"
             android:id="@+id/imageView" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/tvEmployeeList" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.296"/>
     <ImageView android:layout_width="33dp" android:layout_height="31dp" android:src="?attr/actionModeCloseDrawable"
                android:id="@+id/menu_image_view_back2" android:layout_marginTop="8dp"
                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"

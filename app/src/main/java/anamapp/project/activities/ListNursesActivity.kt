@@ -15,6 +15,7 @@ import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_listnurses_nurses.*
+import kotlinx.android.synthetic.main.items_list_nurse.*
 
 class ListNursesActivity : Activity() {
 
@@ -48,6 +49,8 @@ class ListNursesActivity : Activity() {
             val intent = Intent(applicationContext, registerNewEmployeeActivity::class.java)
             startActivity(intent)
         }
+
+
 
         mAuth = FirebaseAuth.getInstance()
 

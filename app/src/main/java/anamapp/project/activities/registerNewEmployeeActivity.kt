@@ -33,6 +33,7 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var databaseNurse: DatabaseReference
     lateinit var query: Query
 
+
     lateinit var bitmap: Bitmap
 
     var auxBool = false
