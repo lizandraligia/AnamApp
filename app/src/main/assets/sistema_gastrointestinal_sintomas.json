@@ -1,15 +1,14 @@
 {
-  "Abdômen Flácido": "checkbox",
-  "Abdômen Globoso": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Abdômen Flácido": "", "Abdômen Globoso": ""},
 
-  "Rígido": "checkbox",
-  "Depressivo": "checkbox",
+  "   ": "radio_group",
+  "radio_group   ": {"Rígido": "", "Depressivo": ""},
 
-  "Doloroso": "checkbox",
-  "Indolor": "checkbox",
+  "    ": "radio_group",
+  "radio_group    ": {"Doloroso": "", "Indolor": ""},
 
-  "Fezes Endurecida": "checkbox",
-  "Fezes Amolecida": "checkbox",
-  "Fezes Pastosa": "checkbox",
+  "     ": "radio_group",
+  "radio_group     ": {"Fezes Endurecida": "", "Fezes Amolecida": "", "Fezes Pastosa": ""},
   "Informação Adicional": "text"
 }

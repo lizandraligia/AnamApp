@@ -1,9 +1,4 @@
 {
-  "Polaciúria": "checkbox",
-  "Poliúria": "checkbox",
-  "Oligúria": "checkbox",
-  "Anúria": "checkbox",
-  "Noctúria": "checkbox",
-  "Hematúria": "checkbox",
-  "Disúria": "checkbox"
+  " ": "radio_group",
+  "radio_group ": {"Polaciúria": "", "Poliúria": "", "Oligúria": "", "Anúria": "", "Noctúria": "", "Hematúria": "", "Disúria": ""}
 }

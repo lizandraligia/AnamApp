@@ -1,15 +1,14 @@
 {
-  "Flaccid Abdomen": "checkbox",
-  "Globose Abdomen": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Flaccid Abdomen": "", "Globose Abdomen": ""},
 
-  "Rigid": "checkbox",
-  "Depressive": "checkbox",
+  "  ": "radio_group",
+  "radio_group  ": {"Rigid": "", "Depressive": ""},
 
-  "Painful": "checkbox",
-  "Painless": "checkbox",
+  "   ": "radio_group",
+  "radio_group   ": {"Painful": "", "Painless": ""},
 
-  "Hardened Excreta": "checkbox",
-  "Softened Excreta": "checkbox",
-  "Pasty Excreta": "checkbox",
+  "    ": "radio_group",
+  "radio_group    ": {"Hardened Excreta": "", "Softened Excreta": "", "Pasty Excreta": ""},
   "Additional Information": "text"
 }

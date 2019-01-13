@@ -1,9 +1,5 @@
 {
-  "Polaciuria": "checkbox",
-  "Polyuria": "checkbox",
-  "Oliguria": "checkbox",
-  "Anuria": "checkbox",
-  "Nocturia": "checkbox",
-  "Hematuria": "checkbox",
-  "Dysuria": "checkbox"
+  " ": "radio_group",
+  "radio_group ": {"Polaciuria": "", "Polyuria": "", "Oliguria": "", "Anuria": "", "Nocturia": "", "Hematuria": "", "Dysuria": ""}
+
 }
