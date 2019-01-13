@@ -1,20 +1,15 @@
 {
-  "Good": "checkbox",
-  "Average": "checkbox",
-  "Bad": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Good": "", "Average": "", "Bad": ""},
 
-  "TEST": "radio_group",
-  "radio_groupTEST": {"Good": "", "Average": "", "Bad": ""},
+  "  ": "radio_group",
+  "radio_group  ": {"Aware/Oriented": "", "Disturbed/Disoriented": ""},
 
-  "Aware/Oriented": "checkbox",
-  "Disturbed/Disoriented": "checkbox",
+  "   ": "radio_group",
+  "radio_group   ": {"Normocorated": "", "Icteric": "", "Pale": ""},
 
-  "Normocorated": "checkbox",
-  "Icteric": "checkbox",
-  "Pale": "checkbox",
-
-  "Hypothermic": "checkbox",
-  "Normothermic": "checkbox",
-  "Feverish": "checkbox",
+  "    ": "radio_group",
+  "radio_group    ": {"Hypothermic": "", "Normothermic": "", "Feverish": ""},
   "Additional Information": "text"
+
 }

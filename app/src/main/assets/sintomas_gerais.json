@@ -1,17 +1,14 @@
 {
-  "Bom": "checkbox",
-  "Regular": "checkbox",
-  "Ruim": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Bom": "", "Regular": "", "Ruim": ""},
 
-  "Consciente/Orientado": "checkbox",
-  "Confuso/Desorientado": "checkbox",
+  "  ": "radio_group",
+  "radio_group   ": {"Consciente/Orientado": "", "Confuso/Desorientado": ""},
 
-  "Normocorado": "checkbox",
-  "Ictérico": "checkbox",
-  "Pálido": "checkbox",
+  "    ": "radio_group",
+  "radio_group    ": {"Normocorado": "", "Ictérico": "", "Pálido": ""},
 
-  "Hipotérmico": "checkbox",
-  "Normotérmico": "checkbox",
-  "Febril": "checkbox",
+  "     ": "radio_group",
+  "radio_group     ": {"Hipotérmico": "", "Normotérmico": "", "Febril": ""},
   "Informações adicionais": "text"
 }

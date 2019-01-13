@@ -1,21 +1,17 @@
 {
-  "Hipotenso": "checkbox",
-  "Normotenso": "checkbox",
-  "Hipertenso": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Hipotenso": "", "Normotenso": "", "Hipertenso": ""},
 
-  "Taquicárdico": "checkbox",
-  "Normocárdico": "checkbox",
-  "Bradicárdico": "checkbox",
+  "  ": "radio_group",
+  "radio_group  ": {"Taquicárdico": "", "Normocárdico": "", "Bradicárdico": ""},
 
-  "Taquisfigmia ": "checkbox",
-  "Normosfigmia": "checkbox",
-  "Bradisfigmia": "checkbox",
+  "   ": "radio_group",
+  "radio_group   ": {"Taquisfigmia": "", "Normosfigmia": "", "Bradisfigmia": ""},
 
-  "Com sopro": "checkbox",
-  "Sem sopro": "checkbox",
+  "    ": "radio_group",
+  "radio_group    ": {"Com sopro": "", "Sem sopro": ""},
 
-  "Pulso Cheio": "checkbox",
-  "Pulso Filiforme": "checkbox",
-  "Pulso Fraco": "checkbox",
+  "     ": "radio_group",
+  "radio_group     ": {"Pulso Cheio": "", "Pulso Filiforme": "", "Pulso Fraco": ""},
   "Informação Adicional": "text"
 }

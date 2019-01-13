@@ -1,21 +1,17 @@
 {
-  "Hypotensive": "checkbox",
-  "Normotensive": "checkbox",
-  "Hypertensive": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Hypotensive": "", "Normotensive": "", "Hypertensive": ""},
 
-  "Tachycardic": "checkbox",
-  "Normocardial": "checkbox",
-  "Bradycardic": "checkbox",
+  "  ": "radio_group",
+  "radio_group  ": {"Tachycardic": "", "Normocardial": "", "Bradycardic": ""},
 
-  "Taquisfigmia ": "checkbox",
-  "Normosfigmia": "checkbox",
-  "Bradisfigmia": "checkbox",
+  "   ": "radio_group",
+  "radio_group   ": {"Taquisfigmia": "", "Normosfigmia": "", "Bradisfigmia": ""},
 
-  "With blow": "checkbox",
-  "Without blow": "checkbox",
+  "    ": "radio_group",
+  "radio_group    ": {"With blow": "", "Without blow": ""},
 
-  "Full Pulse": "checkbox",
-  "Filiform Pulse": "checkbox",
-  "Weak Pulse": "checkbox",
+  "     ": "radio_group",
+  "radio_group     ": {"Full Pulse": "", "Filiform Pulse": "", "Weak Pulse": ""},
   "Additional Information": "text"
 }

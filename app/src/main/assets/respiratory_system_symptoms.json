@@ -1,7 +1,5 @@
 {
-  "Tachypnea": "checkbox",
-  "Normopnea": "checkbox",
-  "Bradipnéia": "checkbox",
-  "Tachidispnea": "checkbox",
+  " ": "radio_group",
+  "radio_group ": {"Tachypnea": "", "Normopnea": "", "Bradipnea": "", "Tachidispnea": ""},
   "Additional Information": "text"
 }
