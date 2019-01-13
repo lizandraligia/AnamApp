@@ -1,6 +1,8 @@
 package anamapp.project.activities
 
 import anamapp.project.R
+import anamapp.project.bean.App
+import anamapp.project.bean.prefs
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -9,22 +11,27 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import java.lang.IllegalStateException
-import android.widget.ProgressBar
-import java.util.regex.Pattern
+
+
+
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
+
+    private var EMPTY = ""
+    private var UID = "Please fill all fields"
+    private var EMAIL = "email"
+    private var myPreferences = "myPrefs"
 
     lateinit var mAuth: FirebaseAuth
 
     override fun onClick(v: View?) {
-
+/*
         val intent = Intent(applicationContext, MenuActivity::class.java)
 
         progressBar.visibility = View.GONE
         startActivity(intent)
 
-        /*
+        */
         if (v == login_button_enter) {
 
             try {
@@ -33,7 +40,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }catch(e: IllegalStateException) {
                 signIn()
             }
-        }*/
+        }
     }
 
 
@@ -41,6 +48,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        mAuth = FirebaseAuth.getInstance()
 
         login_button_enter.setOnClickListener(this)
 
@@ -50,7 +58,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
 
 
-        mAuth = FirebaseAuth.getInstance()
+
     }
 
     public override fun onStart() {
@@ -67,6 +75,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onRestart()
         signOut()
     }
+
+
 
     /* Save data through rotations */
     override fun onSaveInstanceState(outState: Bundle?) {
@@ -107,6 +117,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     val user = mAuth.currentUser
+                    prefs.uid = user!!.uid
+                    prefs.email = user.email!!.toString()
                     //updateUI(user)
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")

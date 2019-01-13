@@ -1,10 +1,9 @@
 package anamapp.project.activities
 
 import anamapp.project.R
-import anamapp.project.bean.Auxiliar
-import anamapp.project.bean.Hospital
-import anamapp.project.bean.Nurse
+import anamapp.project.bean.*
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -28,10 +27,9 @@ import java.lang.IllegalStateException
 
 class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
 
-
+    private var myPreferences = "myPrefs"
     lateinit var mAuth: FirebaseAuth
     lateinit var mAuthLogged: FirebaseAuth
-    lateinit var databaseHospital: DatabaseReference
     lateinit var databaseNurse: DatabaseReference
     lateinit var query: Query
 
@@ -80,46 +78,18 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
         imageChooser.setOnClickListener(this)
 
 
-
-        databaseHospital = FirebaseDatabase.getInstance().getReference("hospital")
-
-        databaseHospital.addListenerForSingleValueEvent(listenerVar)
-
-
         mAuth = FirebaseAuth.getInstance()
 
+
+
+        val sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE)
+        ID = prefs.uid
+        databaseNurse = FirebaseDatabase.getInstance().getReference("nurses").child(ID)
         mAuthLogged = mAuth
 
 
     }
 
-    var listenerVar = (object : ValueEventListener {
-        override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-            list.clear()
-            for (hospitalSnapshot in dataSnapshot.children) {
-                var hospital = hospitalSnapshot.getValue(Hospital::class.java)
-                list.add(hospital!!)
-
-                var email = ""
-                val user = mAuthLogged.currentUser
-                user?.let {
-                    email = user.email!!
-                }
-                for (hospital in list) {
-                    if (hospital.email == email) {
-                        ID = hospital.id
-                    }
-                }
-                databaseNurse = FirebaseDatabase.getInstance().getReference("nurses").child(ID)
-            }
-
-        }
-
-        override fun onCancelled(databaseError: DatabaseError) {
-            //TODO
-        }
-    })
 
 
     public override fun onStart() {
@@ -135,7 +105,6 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
     override fun onDestroy() {
         super.onDestroy()
 
-        databaseHospital.removeEventListener(listenerVar)
     }
     private fun addNurses() {
 
@@ -215,12 +184,12 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
                     bitmap = compressedBitmap
                 }else {
                     auxBool = false
-                    addNurses()
+
                 }
 
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-
+                    addNurses()
                     val user = mAuth.currentUser
                     if (saveNurseInformation(user!!)) {
 

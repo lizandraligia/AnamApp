@@ -2,8 +2,10 @@ package anamapp.project.activities
 
 import anamapp.project.R
 import anamapp.project.adapter.NurseAdapter
+import anamapp.project.bean.App
 import anamapp.project.bean.Hospital
 import anamapp.project.bean.Nurse
+import anamapp.project.bean.prefs
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -62,11 +64,14 @@ class ListNursesActivity : Activity() {
 
         recyclerView.adapter = adapter
 
-        dataBaseHospital = FirebaseDatabase.getInstance().getReference("hospital")
+
+        ID = prefs.uid
+
+
         databaseNurse = FirebaseDatabase.getInstance().getReference("nurses")
 
 
-        dataBaseHospital.addListenerForSingleValueEvent(eventListenerAux)
+        databaseNurse.addValueEventListener(valueEventListener)
 
 
     }
@@ -76,42 +81,8 @@ class ListNursesActivity : Activity() {
         super.onDestroy()
 
         databaseNurse.removeEventListener(valueEventListener)
-        dataBaseHospital.removeEventListener(eventListenerAux)
     }
 
-
-
-    var eventListenerAux = object : ValueEventListener {
-        override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-            list.clear()
-            for (hospitalSnapshot in dataSnapshot.children) {
-                var hospital = hospitalSnapshot.getValue(Hospital::class.java)
-
-                list.add(hospital!!)
-
-                var email = ""
-                val user = mAuth.currentUser
-                user?.let {
-                    email = user.email!!
-                }
-                for (hospital in list) {
-                    if (hospital.email == email) {
-                        ID = hospital.id
-                        databaseNurse.addValueEventListener(valueEventListener)
-                        break
-                    }
-                }
-
-            }
-
-        }
-
-        override fun onCancelled(databaseError: DatabaseError) {
-            //TODO
-        }
-
-    }
 
 
 
