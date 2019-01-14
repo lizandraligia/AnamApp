@@ -8,6 +8,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
+import android.provider.Settings.Global.getString
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -55,21 +57,36 @@ class NurseAdapter(val mContext: Context, val list:ArrayList<Nurse>):
         p0.btnTrash.setImageBitmap(image2)
 
         p0.btnTrash.setOnClickListener {
-            mquery.orderByChild("id")
-                .equalTo(nurse.id)
-                .addListenerForSingleValueEvent(object : ValueEventListener {
-                    override fun onCancelled(p0: DatabaseError) {
-                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                    }
+            val builder = AlertDialog.Builder(mContext)
 
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        if (dataSnapshot.hasChildren()) {
-                            val firstChild = dataSnapshot.children.iterator().next()
-                            firstChild.ref.removeValue()
+            builder.setTitle(R.string.alert_dialog)
+            builder.setMessage(R.string.delete_dialog)
+
+            builder.setPositiveButton(R.string.yes) {dialog, which ->
+                mquery.orderByChild("id")
+                    .equalTo(nurse.id)
+                    .addListenerForSingleValueEvent(object : ValueEventListener {
+                        override fun onCancelled(p0: DatabaseError) {
+                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                         }
-                    }
 
-                })
+                        override fun onDataChange(dataSnapshot: DataSnapshot) {
+                            if (dataSnapshot.hasChildren()) {
+                                val firstChild = dataSnapshot.children.iterator().next()
+                                firstChild.ref.removeValue()
+
+                            }
+                        }
+
+                    })
+            }
+            builder.setNegativeButton(R.string.no) {dialog, which ->
+                //
+
+            }
+            val dialog:AlertDialog = builder.create()
+            dialog.show()
+
         }
     }
 

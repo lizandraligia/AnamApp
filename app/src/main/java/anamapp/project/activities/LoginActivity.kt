@@ -22,14 +22,12 @@ import com.google.firebase.database.*
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
-    private var EMPTY = ""
-    private var UID = "Please fill all fields"
-    private var EMAIL = "email"
-    private var myPreferences = "myPrefs"
 
     lateinit var mAuth: FirebaseAuth
 
     lateinit var query: Query
+
+    var bool = false
 
     override fun onClick(v: View?) {
 /*
@@ -64,17 +62,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
 
-        mAuth.addAuthStateListener(authListener)
-
-
-
-
 
     }
 
     public override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
+        mAuth.addAuthStateListener(authListener)
+        bool = true
         val currentUser = mAuth.currentUser
         if (currentUser != null && intent.getBooleanExtra("Boolean", false)) {
             val intent = Intent(applicationContext, MenuActivity::class.java)
@@ -87,11 +81,27 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         signOut()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onResume() {
+        super.onResume()
+        if(!bool) {
+            mAuth.addAuthStateListener(authListener)
+        }
+    }
+
+
+    override fun onPause() {
+        super.onPause()
+        bool = false
+        mAuth.removeAuthStateListener(authListener)
+
+    }
+
+    override fun onStop() {
+        super.onStop()
         mAuth.removeAuthStateListener(authListener)
         query.removeEventListener(valueEventListener)
     }
+
 
     var valueEventListener = object : ValueEventListener {
         override fun onDataChange(dataSnapshot: DataSnapshot) {

@@ -82,10 +82,7 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
 
 
-
-        val sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE)
-        ID = prefs.uid
-        databaseNurse = FirebaseDatabase.getInstance().getReference("nurses").child(ID)
+        databaseNurse = FirebaseDatabase.getInstance().getReference("nurses").child(prefs.uid)
         mAuthLogged = mAuth
 
 
@@ -107,10 +104,9 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
         super.onDestroy()
 
     }
-    private fun addNurses() {
+    private fun addNurses(user: FirebaseUser) {
 
         var email = ""
-        val user = FirebaseAuth.getInstance().currentUser
         user?.let {
             // Name, email address, and profile photo Url
             email = user.email!!
@@ -176,6 +172,7 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
         progressBar3.visibility = View.VISIBLE
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
+                val user = mAuth.currentUser
                 if(auxBool == false) {
                     val stream = ByteArrayOutputStream()
                     bitmap = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.avatar)
@@ -190,8 +187,8 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
 
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    addNurses()
-                    val user = mAuth.currentUser
+                    addNurses(user!!)
+
                     if (saveNurseInformation(user!!)) {
 
 

@@ -84,4 +84,14 @@
     <string name="general_symptoms_filename">sintomas_gerais.json</string>
     <string name="gastrointestinal_system_symptoms_filename">sistema_gastrointestinal_sintomas.json</string>
     <string name="cardiovascular_symptoms_filename">sintomas_cardiovascular.json</string>
+
+
+
+    <string name="alert_dialog">Confirmação de deleção</string>
+
+    <string name="delete_dialog">Deseja mesmo deletar esses dados?</string>
+
+    <string name="yes">SIM</string>
+
+    <string name="no">NÃO</string>
 </resources>

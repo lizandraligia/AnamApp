@@ -104,6 +104,7 @@ class ListNursesActivity : Activity() {
                 adapter.notifyDataSetChanged()
             }
 
+
         }
 
         override fun onCancelled(databaseError: DatabaseError) {
