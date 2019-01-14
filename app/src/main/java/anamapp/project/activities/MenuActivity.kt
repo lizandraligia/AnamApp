@@ -24,6 +24,11 @@ class MenuActivity: AppCompatActivity(){
             startActivity(intent)
         }
 
+        btnSearchNurse.setOnClickListener {
+            val intent = Intent(applicationContext, SearchNurse::class.java)
+            startActivity(intent)
+        }
+
         menu_image_view_back.setOnClickListener {
             onBackPressed()
         }

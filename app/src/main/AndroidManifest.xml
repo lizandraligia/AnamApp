@@ -4,7 +4,7 @@
           package="anamapp.project">
 
     <application
-            android:name = ".bean.App"
+            android:name=".bean.App"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -12,6 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.SearchNurse">
+        </activity>
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -30,10 +32,6 @@
         <activity android:name=".activities.SearchPatientResultActivity"/>
         <activity android:name=".activities.PatientActivity"/>
         <activity android:name=".activities.RegisterPatientActivity"/>
-
     </application>
-
-
-
 
 </manifest>

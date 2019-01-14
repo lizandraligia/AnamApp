@@ -1,7 +1,6 @@
 package anamapp.project.activities
 
 import anamapp.project.R
-import anamapp.project.bean.Patient
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -14,7 +13,7 @@ class SearchPatientActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_patient)
 
         search_patient_button_search.setOnClickListener {
-            val medical_record = search_patient_edit_text_patient_number.text.toString()
+            val medical_record = search_nurse_edit_text.text.toString()
 
             //PatientSearchResult.patient = Patient("Jonas Freire de Alcantara Marques de Barros", medical_record, "09/08/1935", "98765-1423", 47)
 

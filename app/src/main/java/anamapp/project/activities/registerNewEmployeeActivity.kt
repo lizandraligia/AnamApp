@@ -107,20 +107,21 @@ class registerNewEmployeeActivity : AppCompatActivity(), View.OnClickListener {
     private fun addNurses(user: FirebaseUser) {
 
         var email = ""
+        var uid = ""
         user?.let {
             // Name, email address, and profile photo Url
             email = user.email!!
+            uid = user.uid!!
 
         }
 
 
-        val id: String = databaseNurse.push().key!!
         val nurse: Nurse = Nurse(
-            id, reg_nurse_name.text.toString(), reg_nurse_coren.text.toString(),
+            uid, reg_nurse_name.text.toString(), reg_nurse_coren.text.toString(),
             email, Auxiliar.BitMapToString(bitmap)
         )
 
-        databaseNurse.child(id).setValue(nurse)
+        databaseNurse.child(uid).setValue(nurse)
 
     }
 
