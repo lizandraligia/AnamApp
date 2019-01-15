@@ -5,7 +5,7 @@ import anamapp.project.adapter.PatientAdapter
 import anamapp.project.bean.Nurse
 import anamapp.project.bean.Patient
 import anamapp.project.bean.prefs
-import android.R
+//import android.R
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_search_nurse.*
 import kotlinx.android.synthetic.main.activity_search_patient.*
 
 class SearchPatientActivity : AppCompatActivity() {
@@ -65,7 +66,7 @@ class SearchPatientActivity : AppCompatActivity() {
                 R.layout.simple_spinner_dropdown_item,spinnerInfo
         )
 
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
+        arrayAdapter.setDropDownViewResource(R.layout.simple_spinner_item)
 
         spinnerPatientSearch.adapter = arrayAdapter
 
@@ -82,50 +83,50 @@ class SearchPatientActivity : AppCompatActivity() {
                     if (search_patient_edit_text.text.isBlank()) {
                         search_patient_edit_text.setError(getString(R.string.cannot_be_empty))
                         search_patient_edit_text.requestFocus()
-                        spinnerNurseSearch.setSelection(0)
+                        spinnerPatientSearch.setSelection(0)
                     }
                     if (search_patient_edit_text.isFocused) {
                         search_patient_edit_text.clearFocus()
                     }
                     progressBar5.visibility = View.VISIBLE
-                    query = FirebaseDatabase.getInstance().getReference("nurses").child(SearchNurse.ID)
-                            .orderByChild("nurseCoren")
+                    query = FirebaseDatabase.getInstance().getReference("patient").child(SearchNurse.ID)
+                            .orderByChild("medical_record")
                             .equalTo(search_patient_edit_text.text.toString())
                     query.addListenerForSingleValueEvent(valueEventListener)
-                    spinnerNurseSearch.setSelection(0)
-                } else if (parent!!.getItemAtPosition(position).toString().equals(getString(R.string._spinner_email))) {
+                    spinnerPatientSearch.setSelection(0)
+                } else if (parent!!.getItemAtPosition(position).toString().equals(getString(R.string.spinner_patient_name))) {
                     if (search_patient_edit_text.text.isBlank()) {
                         search_patient_edit_text.setError(getString(R.string.cannot_be_empty))
                         search_patient_edit_text.requestFocus()
-                        spinnerNurseSearch.setSelection(0)
+                        spinnerPatientSearch.setSelection(0)
                         return
                     }
                     if (search_patient_edit_text.isFocused) {
                         search_patient_edit_text.clearFocus()
                     }
                     progressBar5.visibility = View.VISIBLE
-                    query = FirebaseDatabase.getInstance().getReference("nurses").child(SearchNurse.ID)
+                    query = FirebaseDatabase.getInstance().getReference("patient").child(SearchNurse.ID)
                             .orderByChild("email")
                             .equalTo(search_patient_edit_text.text.toString())
                     query.addListenerForSingleValueEvent(valueEventListener)
-                    spinnerNurseSearch.setSelection(0)
+                    spinnerPatientSearch.setSelection(0)
 
                 } else {
                     if (search_patient_edit_text.text.isBlank()) {
                         search_patient_edit_text.setError(getString(R.string.cannot_be_empty))
                         search_patient_edit_text.requestFocus()
-                        spinnerNurseSearch.setSelection(0)
+                        spinnerPatientSearch.setSelection(0)
                         return
                     }
                     if (search_patient_edit_text.isFocused) {
                         search_patient_edit_text.clearFocus()
                     }
                     progressBar5.visibility = View.VISIBLE
-                    query = FirebaseDatabase.getInstance().getReference("nurses").child(SearchNurse.ID)
-                            .orderByChild("nurseName")
+                    query = FirebaseDatabase.getInstance().getReference("patient").child(SearchNurse.ID)
+                            .orderByChild("name")
                             .equalTo(search_patient_edit_text.text.toString())
                     query.addListenerForSingleValueEvent(valueEventListener)
-                    spinnerNurseSearch.setSelection(0)
+                    spinnerPatientSearch.setSelection(0)
                 }
             }
 
@@ -146,12 +147,12 @@ class SearchPatientActivity : AppCompatActivity() {
         override fun onDataChange(dataSnapshot: DataSnapshot) {
             var p = prefs.uid
             if (dataSnapshot.exists()) {
-                listNurse.clear()
+                listPatient.clear()
 
                 for (nurseSnapshot in dataSnapshot.children) {
                     var nurse = nurseSnapshot.getValue(Nurse::class.java)
 
-                    listNurse.add(nurse!!)
+                    listPatient.add(nurse!!)
 
 
                 }
