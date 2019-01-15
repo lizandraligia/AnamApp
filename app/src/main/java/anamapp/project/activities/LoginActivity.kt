@@ -41,6 +41,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if (v == login_button_enter) {
             try {
 
+                query.addValueEventListener(valueEventListener)
                 signIn(login_edit_text_login.text.toString(), login_edit_text_password.text.toString())
             } catch (e: IllegalStateException) {
                 signIn()
@@ -53,8 +54,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        bool = false
-        bool2 = false
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -65,13 +64,17 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
 
+        mAuth.addAuthStateListener(authListener)
+        bool = true
+
 
     }
 
     public override fun onStart() {
         super.onStart()
-        mAuth.addAuthStateListener(authListener)
-        bool = true
+        if(!bool) {
+            mAuth.addAuthStateListener(authListener)
+        }
         val currentUser = mAuth.currentUser
         if (currentUser != null && intent.getBooleanExtra("Boolean", false)) {
             val intent = Intent(applicationContext, MenuActivity::class.java)
@@ -96,7 +99,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onPause() {
         super.onPause()
         bool = false
+        bool2 = false
         mAuth.removeAuthStateListener(authListener)
+
 
     }
 
@@ -108,6 +113,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onDestroy() {
         super.onDestroy()
+        mAuth.removeAuthStateListener(authListener)
+        query.removeEventListener(valueEventListener)
     }
 
 
@@ -125,6 +132,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
 
                 }
+            }else {
+
             }
 
         }
@@ -202,8 +211,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     println("TESTE");
                     println(bool2);
 
-                    if(bool2) {
-                        bool2 = false
+                    if(prefs.hospitalName!= "") {
                         val intent = Intent(applicationContext, MenuActivity::class.java)
                         startActivity(intent)
                     }else {

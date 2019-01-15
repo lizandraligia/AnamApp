@@ -2,6 +2,7 @@ package anamapp.project.activities
 
 import anamapp.project.R
 import anamapp.project.bean.Constant
+import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
@@ -23,7 +24,14 @@ class SymptomsMenuActivity : AppCompatActivity() {
         btnFinishSymptoms.setOnClickListener {
 //            val intent = Intent(applicationContext, PatientActivity::class.java)
 //            startActivity(intent)
-            println(this.jsonArrayResult.toString(2))       // TODO remove this later
+
+            val intent = Intent()
+            intent.putExtra(Constant.JSON_RESULT, jsonArrayResult.toString())
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+
+
+            //println(this.jsonArrayResult.toString(2))       // TODO remove this later
         }
 
         menu_image_view_back3.setOnClickListener {
