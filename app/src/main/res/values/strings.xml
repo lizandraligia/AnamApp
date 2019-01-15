@@ -11,7 +11,6 @@
     <string name="main_menu_button_registrate_patient">Registrate Patient</string>
     <string name="main_menu_button_search_patient">Search Patient</string>
     <string name="main_menu_button_list_employees">Employee List</string>
-    <string name="main_menu_button_search_nurse">Search Nurse</string>
 
 
     <string name="search_patient_text_field_search_patient">Search Patient</string>
@@ -84,7 +83,7 @@
     <string name="superior_locomotor_system_button">SUPERIOR LOCOMOTOR SYSTEM</string>
     <string name="inferior_locomotor_system_button">INFERIOR LOCOMOTOR SYSTEM</string>
 
-    <string name="authentication_sucessfull">Authenticated successfully</string>
+    <string name="authentication_sucessfull"> Authenticated successfully</string>
 
     <string name="name_nurse">Name</string>
 
@@ -105,23 +104,6 @@
     <string name="yes">YES</string>
 
     <string name="no">NO</string>
-
-
-    <string name="search_nurse">Search Nurse</string>
-
-
-    <string name="nurse_info">Nurse info</string>
-
-    <string name="_spinner_email">Nurse e-mail</string>
-    <string name="spinner_coren">Coren number</string>
-    <string name="spinner_name">Nurse name</string>
-
-    <string name="no_data_found">Sorry, no data found!</string>
-
-
-
-
-
-
+    <string name="patient_list">Patients List</string>
 
 </resources>

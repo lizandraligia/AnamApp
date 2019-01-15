@@ -11,7 +11,6 @@
     <string name="main_menu_button_registrate_patient">Registrar Paciente</string>
     <string name="main_menu_button_search_patient">Buscar Paciente</string>
     <string name="main_menu_button_list_employees">Lista de Funcionários</string>
-    <string name="main_menu_button_search_nurse">Buscar enfermeiro(a)</string>
 
     <string name="login_hint_login">" Login"</string>
     <string name="search_patient_text_field_search_patient">Buscar Paciente</string>
@@ -95,19 +94,5 @@
     <string name="yes">SIM</string>
 
     <string name="no">NÃO</string>
-
-    <string name="search_nurse">Procurar Enfermeiro(a)</string>
-
-    <string name="nurse_info">Informações do enfermeiro(a)</string>
-
-    <string name="spinner_coren">Número coren</string>
-    <string name="spinner_name">Nome Enfermeiro(a)</string>
-    <string name="_spinner_email">Nurse e-mail</string>
-
-    <string name="no_data_found">Desculpe, nenhum dado encontrado!</string>
-
-
-
-
-
+    <string name="patient_list">Lista de Pacientes</string>
 </resources>
