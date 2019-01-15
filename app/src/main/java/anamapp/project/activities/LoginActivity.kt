@@ -113,7 +113,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     var valueEventListener = object : ValueEventListener {
         override fun onDataChange(dataSnapshot: DataSnapshot) {
-
             if (dataSnapshot.exists()) {
                 for (nurseSnapshot in dataSnapshot.children) {
                     bool2 = true
@@ -122,6 +121,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     prefs.address = hospital!!.address
                     prefs.city = hospital!!.city
                     prefs.state = hospital!!.state
+                    println(bool2)
 
 
                 }
@@ -181,6 +181,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if (!validateForm(email, password)) {
             return
         }
+        println("TESTE");
+        println(bool2);
 
 
         progressBar.visibility = View.VISIBLE
@@ -196,6 +198,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     //updateUI(user)
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")
+
+                    println("TESTE");
+                    println(bool2);
 
                     if(bool2) {
                         bool2 = false

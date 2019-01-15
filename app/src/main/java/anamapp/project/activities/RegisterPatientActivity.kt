@@ -27,7 +27,6 @@ class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var databasePatient: DatabaseReference
     lateinit var query: Query
 
-    lateinit var bitmap: Bitmap
 
     var auxBool = false
     var list: ArrayList<Patient> = ArrayList<Patient>()
@@ -70,7 +69,7 @@ class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         mAuth = FirebaseAuth.getInstance()
-        databasePatient = FirebaseDatabase.getInstance().getReference("patient").child(prefs.uid)
+        databasePatient = FirebaseDatabase.getInstance().getReference("patient")
         mAuthLogged = mAuth
     }
 
@@ -92,10 +91,11 @@ class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
     private fun addPatient(user: FirebaseUser) {
 
         var name = ""
+        var uid = ""
         //val user = FirebaseAuth.getInstance().currentUser
         user?.let {
             name = user.displayName!!
-
+            uid = user.uid
         }
 
 
@@ -104,7 +104,7 @@ class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
                 register_patient_edit_text_name.text.toString(), register_patient_edit_text_medical_record.text.toString()
         )
 
-        databasePatient.child(id).setValue(patient)
+        databasePatient.child(uid).child(id).setValue(patient)
 
     }
 
@@ -116,86 +116,23 @@ class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
             return
         }
 
-        //progressBar3.visibility = View.VISIBLE
-        /*
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-                    val user = mAuth.currentUser
-                    if(auxBool == false) {
-                        val stream = ByteArrayOutputStream()
-                        bitmap = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.avatar)
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, stream)
-                        val byteArray = stream.toByteArray()
-                        val compressedBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
-                        bitmap = compressedBitmap
-                    }else {
-                        auxBool = false
+        //progressBar.visibility = View.VISIBLE
+                val user = mAuth.currentUser
+                if (savePatientInformation(user!!)) {
+                    addPatient(user)
 
-                    }
-
-                    if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        addNurses(user!!)
-
-                        if (saveNurseInformation(user!!)) {
-
-
-                            Toast.makeText(
-                                    baseContext, getString(R.string.authentication_sucessfull),
-                                    Toast.LENGTH_LONG
-                            ).show()
-
-                            reg_nurse_confirmPass.setText("")
-                            reg_nurse_pass.setText("")
-                            reg_nurse_name.setText("")
-                            reg_nurse_coren.setText("")
-                            reg_nurse_email.setText("")
-
-                        } else {
-                            Toast.makeText(
-                                    baseContext, getString(R.string.authentication_failed),
-                                    Toast.LENGTH_SHORT
-                            ).show()
-                        }
-
-
-                        val stream = ByteArrayOutputStream()
-
-                        //progressBar3.visibility = View.GONE
-                        //var bitmap2 = BitmapFactory.decodeResource(applicationContext.resources, R.mipmap.camera_icon)
-
-                        //imageChooser.setImageBitmap(bitmap2)
-
-                    } else {
-
-                        try {
-                            throw task.exception!!
-                        } catch (e: FirebaseAuthUserCollisionException) {
-                            reg_nurse_email.setError(getString(R.string.user_already_exists))
-                            reg_nurse_email.requestFocus()
-                        } catch (e: FirebaseAuthWeakPasswordException) {
-                            reg_nurse_pass.setError(getString(R.string.weak_pass))
-                            reg_nurse_pass.requestFocus()
-                        }
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(
-                                baseContext, getString(R.string.authentication_failed),
-                                Toast.LENGTH_SHORT
-                        ).show()
-                        progressBar3.visibility = View.GONE
-                        //updateUI(null)
-
-                        val stream = ByteArrayOutputStream()
-
-                        progressBar3.visibility = View.GONE
-
-                        var bitmap2 = BitmapFactory.decodeResource(applicationContext.resources, R.mipmap.camera_icon)
-
-                        imageChooser.setImageBitmap(bitmap2)
-                    }
-
-
-                }*/
+                    Toast.makeText(
+                        baseContext, getString(R.string.authentication_sucessfull),
+                        Toast.LENGTH_LONG
+                    ).show()
+                    register_patient_edit_text_name.setText("")
+                    register_patient_edit_text_medical_record.setText("")
+                }else {
+                    Toast.makeText(
+                        baseContext, getString(R.string.authentication_failed),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
     }
 
     fun validateForm(medical_record: String, name: String): Boolean {

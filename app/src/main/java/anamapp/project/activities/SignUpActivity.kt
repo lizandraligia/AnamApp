@@ -2,7 +2,6 @@ package anamapp.project.activities
 
 import anamapp.project.R
 import anamapp.project.bean.Hospital
-import anamapp.project.bean.Nurse
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +15,7 @@ import com.google.firebase.auth.*
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import java.lang.IllegalStateException
-import java.util.regex.Pattern
+
 
 class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var mAuth: FirebaseAuth
