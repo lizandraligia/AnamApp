@@ -127,6 +127,10 @@ class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
             ).show()
             register_patient_edit_text_name.setText("")
             register_patient_edit_text_medical_record.setText("")
+            val intent: Intent = Intent(applicationContext, PatientActivity::class.java)
+            val objeto = Patient( medical_record,name, jSon)
+            intent.putExtra("objeto", objeto)
+            startActivity(intent)
 
         } else {
             Toast.makeText(

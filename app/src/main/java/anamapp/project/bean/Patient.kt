@@ -1,6 +1,7 @@
 package anamapp.project.bean
 
 import org.json.JSONArray
+import java.io.Serializable
 
 /*
 
@@ -16,7 +17,7 @@ class Patient(  val name : String = "",
                 //val fone : String,
                 //val age : Int,
                 //val corenNurseID: String
-         ) {
+         ) :Serializable {
 
 
 
