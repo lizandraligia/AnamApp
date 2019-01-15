@@ -5,25 +5,20 @@
                                              android:layout_height="match_parent"
                                              android:background="@drawable/gradient_background">
 
+    <Button android:id="@+id/btnEmployeeList" android:layout_width="150dp" android:layout_height="96dp"
+            android:text="@string/main_menu_button_list_employees" app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/round_btn"
+            app:layout_constraintTop_toTopOf="@+id/btnSearchNurse"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSearchNurse"
+            app:layout_constraintStart_toEndOf="@+id/btnSearchNurse" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginEnd="50dp"/>
     <ImageView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
             app:layout_constraintDimensionRatio="6:1"
             app:srcCompat="@drawable/logo"
             android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"/>
-
-    <Button
-            android:id="@+id/btnRegPaciente"
-            android:layout_width="150dp"
-            android:layout_height="95dp"
-            android:text="@string/main_menu_button_registrate_patient"
-            android:background="@drawable/round_btn"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.431" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="44dp"/>
+            android:layout_marginTop="8dp" android:layout_height="0dp"/>
 
     <Button
             android:id="@+id/btnInfo"
@@ -42,18 +37,17 @@
             android:layout_width="150dp"
             android:layout_height="95dp"
             android:text="@string/main_menu_button_search_patient"
-            app:layout_constraintBottom_toBottomOf="@+id/btnRegPaciente"
             android:background="@drawable/round_btn"
-            app:layout_constraintTop_toTopOf="@+id/btnRegPaciente"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/btnRegPaciente" android:layout_marginStart="8dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
     <Button android:id="@+id/btnSearchNurse" android:layout_width="150dp" android:layout_height="96dp"
-            android:text="@string/main_menu_button_search_nurse" app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/main_menu_button_search_nurse"
             android:background="@drawable/round_btn"
             app:layout_constraintStart_toEndOf="@+id/btnInfo"
             android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="@+id/btnInfo" app:layout_constraintBottom_toBottomOf="@+id/btnInfo"
-            app:layout_constraintHorizontal_bias="0.0"/>
+    />
     <ImageView
             android:layout_width="33dp"
             android:layout_height="31dp" app:srcCompat="?attr/actionModeCloseDrawable"

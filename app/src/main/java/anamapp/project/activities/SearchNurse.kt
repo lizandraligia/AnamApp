@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_register_new_employee.*
 import kotlinx.android.synthetic.main.activity_search_nurse.*
 
 class SearchNurse : AppCompatActivity() {
@@ -86,41 +87,50 @@ class SearchNurse : AppCompatActivity() {
                     if (search_nurse_edit_text.text.isBlank()) {
                         search_nurse_edit_text.setError(getString(R.string.cannot_be_empty))
                         search_nurse_edit_text.requestFocus()
+                        spinnerNurseSearch.setSelection(0)
                     }
                     if (search_nurse_edit_text.isFocused) {
                         search_nurse_edit_text.clearFocus()
                     }
+                    progressBar5.visibility = View.VISIBLE
                     query = FirebaseDatabase.getInstance().getReference("nurses").child(ID)
                         .orderByChild("nurseCoren")
                         .equalTo(search_nurse_edit_text.text.toString())
                     query.addListenerForSingleValueEvent(valueEventListener)
+                    spinnerNurseSearch.setSelection(0)
                 } else if (parent!!.getItemAtPosition(position).toString().equals(getString(R.string._spinner_email))) {
                     if (search_nurse_edit_text.text.isBlank()) {
                         search_nurse_edit_text.setError(getString(R.string.cannot_be_empty))
                         search_nurse_edit_text.requestFocus()
+                        spinnerNurseSearch.setSelection(0)
                         return
                     }
                     if (search_nurse_edit_text.isFocused) {
                         search_nurse_edit_text.clearFocus()
                     }
+                    progressBar5.visibility = View.VISIBLE
                     query = FirebaseDatabase.getInstance().getReference("nurses").child(ID)
                         .orderByChild("email")
                         .equalTo(search_nurse_edit_text.text.toString())
                     query.addListenerForSingleValueEvent(valueEventListener)
+                    spinnerNurseSearch.setSelection(0)
 
                 } else {
                     if (search_nurse_edit_text.text.isBlank()) {
                         search_nurse_edit_text.setError(getString(R.string.cannot_be_empty))
                         search_nurse_edit_text.requestFocus()
+                        spinnerNurseSearch.setSelection(0)
                         return
                     }
                     if (search_nurse_edit_text.isFocused) {
                         search_nurse_edit_text.clearFocus()
                     }
+                    progressBar5.visibility = View.VISIBLE
                     query = FirebaseDatabase.getInstance().getReference("nurses").child(ID)
                         .orderByChild("nurseName")
                         .equalTo(search_nurse_edit_text.text.toString())
                     query.addListenerForSingleValueEvent(valueEventListener)
+                    spinnerNurseSearch.setSelection(0)
                 }
             }
 
@@ -150,10 +160,13 @@ class SearchNurse : AppCompatActivity() {
 
 
                 }
+
                 adapter.notifyDataSetChanged()
             }else {
                 Toast.makeText(applicationContext, getString(R.string.no_data_found), Toast.LENGTH_SHORT).show()
             }
+            progressBar5.visibility = View.GONE
+
 
         }
 

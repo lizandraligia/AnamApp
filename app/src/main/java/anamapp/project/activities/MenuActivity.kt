@@ -1,7 +1,6 @@
 package anamapp.project.activities
 
 import anamapp.project.R
-import anamapp.project.bean.prefs
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -19,8 +18,8 @@ class MenuActivity: AppCompatActivity(){
             startActivity(intent)
         }
 
-        btnRegPaciente.setOnClickListener {
-            val intent = Intent(applicationContext, RegisterPatientActivity::class.java)
+        btnEmployeeList.setOnClickListener {
+            val intent = Intent(applicationContext, ListNursesActivity::class.java)
             startActivity(intent)
         }
 

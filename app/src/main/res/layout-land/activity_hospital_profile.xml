@@ -112,14 +112,4 @@
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.31" android:textSize="20sp"
             android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.1" android:textStyle="bold"/>
-    <Button
-            android:text="@string/tv_employee_list"
-            android:layout_width="315dp"
-            android:layout_height="68dp"
-            android:background="@drawable/round_btn"
-            android:id="@+id/btnFuncionario" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="32dp"
-            app:layout_constraintHorizontal_bias="0.517"/>
 </android.support.constraint.ConstraintLayout>

@@ -106,4 +106,21 @@
     <string name="no">NO</string>
     <string name="patient_list">Patients List</string>
 
+    <string name="main_menu_button_search_nurse">Search Nurse</string>
+
+    <string name="search_nurse">Search Nurse</string>
+
+    <string name="nurse_info">Nurse info</string>
+
+    <string name="no_data_found">Sorry, no data found!</string>
+
+
+    <string name="Email">E-mail:</string>
+    <string name="Name">Name:</string>
+
+
+    <string name="_spinner_email">Nurse e-mail</string>
+    <string name="spinner_coren">Coren number</string>
+    <string name="spinner_name">Nurse name</string>
+
 </resources>

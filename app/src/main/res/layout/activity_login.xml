@@ -35,7 +35,7 @@
             android:id="@+id/login_edit_text_login" android:layout_width="match_parent" android:layout_height="29dp"
             android:layout_marginEnd="8dp" android:layout_marginStart="8dp" android:layout_marginTop="64dp"
             android:background="@drawable/round_et" android:hint="@string/login_hint_login"
-            android:textColorHint="@color/colorPrimary" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
 
     <EditText
@@ -48,7 +48,6 @@
             android:background="@drawable/round_et"
             android:hint="@string/login_hint_password"
             android:inputType="textPassword"
-            android:textColorHint="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_edit_text_login"/>

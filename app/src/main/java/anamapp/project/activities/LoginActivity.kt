@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var query: Query
 
     var bool = false
+    var bool2 = false
 
     override fun onClick(v: View?) {
 /*
@@ -108,6 +109,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
             if (dataSnapshot.exists()) {
                 for (nurseSnapshot in dataSnapshot.children) {
+                    bool2 = true
                     var hospital = nurseSnapshot.getValue(Hospital::class.java)
                     prefs.hospitalName = hospital!!.name
                     prefs.address = hospital!!.address
@@ -187,10 +189,20 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     //updateUI(user)
                     login_edit_text_login.setText("")
                     login_edit_text_password.setText("")
-                    val intent = Intent(applicationContext, MenuActivity::class.java)
+
+                    if(bool2) {
+                        bool2 = false
+                        val intent = Intent(applicationContext, MenuActivity::class.java)
+                        startActivity(intent)
+                    }else {
+                        val intent = Intent(applicationContext, MenuNurseActivity::class.java)
+                        startActivity(intent)
+                    }
+
 
                     progressBar.visibility = View.GONE
-                    startActivity(intent)
+
+
 
                 } else {
                     // If sign in fails, display a message to the user.

@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_listnurses_nurses.*
@@ -73,6 +74,7 @@ class ListNursesActivity : Activity() {
 
         databaseNurse = FirebaseDatabase.getInstance().getReference("nurses")
 
+        progressBar4.visibility = View.VISIBLE
 
         databaseNurse.addValueEventListener(valueEventListener)
 
@@ -101,9 +103,12 @@ class ListNursesActivity : Activity() {
 
 
                 }
-                adapter.notifyDataSetChanged()
-            }
 
+                adapter.notifyDataSetChanged()
+            }else {
+                Toast.makeText(applicationContext, getString(R.string.no_data_found), Toast.LENGTH_SHORT).show()
+            }
+            progressBar4.visibility = View.GONE
 
         }
 

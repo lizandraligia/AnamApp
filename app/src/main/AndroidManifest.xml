@@ -12,6 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.MenuNurseActivity">
+        </activity>
         <activity android:name=".activities.SearchNurse">
         </activity>
         <activity android:name=".activities.LoginActivity">

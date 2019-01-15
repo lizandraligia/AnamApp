@@ -13,11 +13,6 @@ class HospitalProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_profile)
 
-        btnFuncionario.setOnClickListener {
-            val intent = Intent(applicationContext, ListNursesActivity::class.java)
-            startActivity(intent)
-        }
-
         menu_image_view_back.setOnClickListener {
             finish()
         }

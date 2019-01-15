@@ -9,6 +9,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.provider.Settings.Global.getString
+import android.support.v4.content.res.TypedArrayUtils.getText
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -53,6 +54,9 @@ class NurseAdapter(val mContext: Context, val list:ArrayList<Nurse>):
         p0.imageViewNurse.setImageBitmap(Auxiliar.StringToBitMap(nurse.image))
         p0.btnEdit.setImageBitmap(image)
         p0.btnTrash.setImageBitmap(image2)
+        p0.tvCoren.setText(R.string.coren)
+        p0.tvEmail.setText(R.string.Email)
+        p0.tvName.setText(R.string.Name)
 
         p0.btnTrash.setOnClickListener {
             val builder = AlertDialog.Builder(mContext)
@@ -98,6 +102,10 @@ class NurseAdapter(val mContext: Context, val list:ArrayList<Nurse>):
         val textViewEmail = itemView.textViewEmail
         val btnTrash = itemView.btnTrashIcon
         val btnEdit = itemView.btnEditIcon
+
+        val tvName = itemView.textViewNameDescription
+        val tvCoren = itemView.textViewCorenDescription
+        val tvEmail = itemView.textViewEmailDescription
 
     }
 }
