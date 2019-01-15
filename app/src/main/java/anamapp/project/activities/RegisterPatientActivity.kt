@@ -1,13 +1,59 @@
 package anamapp.project.activities
 
 import anamapp.project.R
+import anamapp.project.bean.Hospital
+import anamapp.project.bean.Patient
+import anamapp.project.bean.prefs
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
+import android.view.View
+import android.widget.Toast
+//import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_register_patient.*
-import kotlinx.android.synthetic.main.activity_search_patient.*
+import java.io.ByteArrayOutputStream
 
-class RegisterPatientActivity : AppCompatActivity() {
+class RegisterPatientActivity : AppCompatActivity(), View.OnClickListener {
+
+    lateinit var mAuth: FirebaseAuth
+    lateinit var mAuthLogged: FirebaseAuth
+    lateinit var databaseHospital: DatabaseReference
+    lateinit var databasePatient: DatabaseReference
+    lateinit var query: Query
+
+    lateinit var bitmap: Bitmap
+
+    var auxBool = false
+    var list: ArrayList<Patient> = ArrayList<Patient>()
+
+    //lateinit var uriProfileImage: Uri
+
+
+    companion object {
+        var ID = ""
+        var REQUEST_CODE = 204
+    }
+
+    override fun onClick(v: View?) {
+
+        try {
+            createAccount(
+                    register_patient_edit_text_name.text.toString(),
+                    register_patient_edit_text_medical_record.text.toString()
+            )
+        } catch (e: Exception) {
+            createAccount()
+        }
+
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,9 +68,174 @@ class RegisterPatientActivity : AppCompatActivity() {
         register_patient_image_view_back.setOnClickListener {
             finish()
         }
+
+        mAuth = FirebaseAuth.getInstance()
+        databasePatient = FirebaseDatabase.getInstance().getReference("patient").child(prefs.uid)
+        mAuthLogged = mAuth
     }
 
 
+    public override fun onStart() {
+        super.onStart()
 
+        // Add value event listener to the post
+        // [START post_value_event_listener]
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        //databaseHospital.removeEventListener(listenerVar)
+    }
+
+    private fun addPatient(user: FirebaseUser) {
+
+        var name = ""
+        //val user = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            name = user.displayName!!
+
+        }
+
+
+        val id: String = databasePatient.push().key!!
+        val patient: Patient = Patient(
+                register_patient_edit_text_name.text.toString(), register_patient_edit_text_medical_record.text.toString()
+        )
+
+        databasePatient.child(id).setValue(patient)
+
+    }
+
+    private fun createAccount( // INSERIR METODO AQUI PARA CRIAR CONTA. O CODIGO DAQUI É PRA AUTENTICAÇÃO, PELO QUE ENTENDI
+            medical_record: String = "",
+            name: String = ""
+    ){
+        if (!validateForm(medical_record, name)) {
+            return
+        }
+
+        //progressBar3.visibility = View.VISIBLE
+        /*
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    val user = mAuth.currentUser
+                    if(auxBool == false) {
+                        val stream = ByteArrayOutputStream()
+                        bitmap = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.avatar)
+                        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, stream)
+                        val byteArray = stream.toByteArray()
+                        val compressedBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+                        bitmap = compressedBitmap
+                    }else {
+                        auxBool = false
+
+                    }
+
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        addNurses(user!!)
+
+                        if (saveNurseInformation(user!!)) {
+
+
+                            Toast.makeText(
+                                    baseContext, getString(R.string.authentication_sucessfull),
+                                    Toast.LENGTH_LONG
+                            ).show()
+
+                            reg_nurse_confirmPass.setText("")
+                            reg_nurse_pass.setText("")
+                            reg_nurse_name.setText("")
+                            reg_nurse_coren.setText("")
+                            reg_nurse_email.setText("")
+
+                        } else {
+                            Toast.makeText(
+                                    baseContext, getString(R.string.authentication_failed),
+                                    Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+
+                        val stream = ByteArrayOutputStream()
+
+                        //progressBar3.visibility = View.GONE
+                        //var bitmap2 = BitmapFactory.decodeResource(applicationContext.resources, R.mipmap.camera_icon)
+
+                        //imageChooser.setImageBitmap(bitmap2)
+
+                    } else {
+
+                        try {
+                            throw task.exception!!
+                        } catch (e: FirebaseAuthUserCollisionException) {
+                            reg_nurse_email.setError(getString(R.string.user_already_exists))
+                            reg_nurse_email.requestFocus()
+                        } catch (e: FirebaseAuthWeakPasswordException) {
+                            reg_nurse_pass.setError(getString(R.string.weak_pass))
+                            reg_nurse_pass.requestFocus()
+                        }
+                        // If sign in fails, display a message to the user.
+                        Toast.makeText(
+                                baseContext, getString(R.string.authentication_failed),
+                                Toast.LENGTH_SHORT
+                        ).show()
+                        progressBar3.visibility = View.GONE
+                        //updateUI(null)
+
+                        val stream = ByteArrayOutputStream()
+
+                        progressBar3.visibility = View.GONE
+
+                        var bitmap2 = BitmapFactory.decodeResource(applicationContext.resources, R.mipmap.camera_icon)
+
+                        imageChooser.setImageBitmap(bitmap2)
+                    }
+
+
+                }*/
+    }
+
+    fun validateForm(medical_record: String, name: String): Boolean {
+
+        if (medical_record.equals("")) {
+            register_patient_edit_text_medical_record.setError(getString(R.string.cannot_be_empty))
+            register_patient_edit_text_medical_record.requestFocus()
+        }
+        if (name.equals("")) {
+            register_patient_edit_text_name.setError(getString(R.string.cannot_be_empty))
+            register_patient_edit_text_name.requestFocus()
+        }
+        return true
+
+    }
+
+    private fun savePatientInformation(user: FirebaseUser): Boolean {
+        var bool = false
+
+        if (user != null) {
+            var profile = UserProfileChangeRequest.Builder()
+                    .setDisplayName(register_patient_edit_text_name.text.toString())
+                    .build()
+
+            try {
+                user.updateProfile(profile)
+                bool = true
+            } catch (e: Exception) {
+
+                user.delete()
+                Toast.makeText(
+                        baseContext, getString(R.string.authentication_failed),
+                        Toast.LENGTH_LONG
+                ).show()
+                bool = false
+            }
+
+        }
+        return bool
+
+    }
 
 }

@@ -7,11 +7,12 @@ package anamapp.project.bean
  */
 
 class Patient(  val name : String,
-                val medical_record : String,
-                val birth_date : String,
-                val fone : String,
-                val age : Int,
-                val corenNurseID: String) {
+                val medical_record : String
+                //val birth_date : String,
+                //val fone : String,
+                //val age : Int,
+                //val corenNurseID: String
+         ) {
 
 
 
