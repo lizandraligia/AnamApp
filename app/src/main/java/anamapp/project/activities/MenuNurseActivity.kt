@@ -1,6 +1,7 @@
 package anamapp.project.activities
 
 import anamapp.project.R
+import anamapp.project.bean.prefs
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -31,6 +32,7 @@ class MenuNurseActivity: AppCompatActivity(){
 
         logOutNurseProf.setOnClickListener {
             finish()
+            prefs.uid = ""
         }
 
 

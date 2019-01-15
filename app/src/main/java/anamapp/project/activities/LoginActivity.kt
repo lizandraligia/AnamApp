@@ -39,7 +39,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         */
         if (v == login_button_enter) {
-
             try {
 
                 signIn(login_edit_text_login.text.toString(), login_edit_text_password.text.toString())
@@ -53,6 +52,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        bool = false
+        bool2 = false
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -84,6 +86,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
+        signOut()
         if(!bool) {
             mAuth.addAuthStateListener(authListener)
         }
@@ -101,6 +104,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onStop()
         mAuth.removeAuthStateListener(authListener)
         query.removeEventListener(valueEventListener)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 
 
@@ -206,6 +213,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
                 } else {
                     // If sign in fails, display a message to the user.
+                    bool2 = false
                     Toast.makeText(
                         baseContext, getString(R.string.authentication_failed),
                         Toast.LENGTH_SHORT
