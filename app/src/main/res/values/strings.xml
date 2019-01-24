@@ -122,5 +122,9 @@
     <string name="_spinner_email">Nurse e-mail</string>
     <string name="spinner_coren">Coren number</string>
     <string name="spinner_name">Nurse name</string>
+    <string name="spinner_medical_record">Medical Record</string>
+    <string name="spinner_patient_name">Patient name</string>
+
+
 
 </resources>

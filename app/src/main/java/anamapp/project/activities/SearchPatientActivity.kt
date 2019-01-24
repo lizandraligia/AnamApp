@@ -63,10 +63,10 @@ class SearchPatientActivity : AppCompatActivity() {
 
         var arrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(
                 this,
-                R.layout.simple_spinner_dropdown_item,spinnerInfo
+                android.R.layout.simple_spinner_dropdown_item,spinnerInfo
         )
 
-        arrayAdapter.setDropDownViewResource(R.layout.simple_spinner_item)
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
 
         spinnerPatientSearch.adapter = arrayAdapter
 
@@ -150,9 +150,9 @@ class SearchPatientActivity : AppCompatActivity() {
                 listPatient.clear()
 
                 for (nurseSnapshot in dataSnapshot.children) {
-                    var nurse = nurseSnapshot.getValue(Nurse::class.java)
+                    var patient = nurseSnapshot.getValue(Patient::class.java)
 
-                    listPatient.add(nurse!!)
+                    listPatient.add(patient!!)
 
 
                 }

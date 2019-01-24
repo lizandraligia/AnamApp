@@ -41,7 +41,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if (v == login_button_enter) {
             try {
 
-                query.addValueEventListener(valueEventListener)
                 signIn(login_edit_text_login.text.toString(), login_edit_text_password.text.toString())
             } catch (e: IllegalStateException) {
                 signIn()
@@ -58,11 +57,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
 
         login_button_enter.setOnClickListener(this)
-
-        text_field_sign_up.setOnClickListener {
+//
+  /*      text_field_sign_up.setOnClickListener {
             val intent = Intent(applicationContext, SignUpActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
         mAuth.addAuthStateListener(authListener)
         bool = true
@@ -211,7 +210,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     println("TESTE");
                     println(bool2);
 
-                    if(prefs.hospitalName!= "") {
+                    if(password != "teste123") {
                         val intent = Intent(applicationContext, MenuActivity::class.java)
                         startActivity(intent)
                     }else {

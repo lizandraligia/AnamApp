@@ -33,20 +33,19 @@
     />
 
     <EditText
-            android:id="@+id/login_edit_text_login"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="42dp"
-            android:layout_marginEnd="42dp"
-            android:background="@drawable/round_et"
-            android:hint="@string/login_hint_login"
+        android:id="@+id/login_edit_text_login"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_et"
 
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_field_sign_up"
-            app:layout_constraintVertical_bias="0.20999998"/>
+        android:hint="@string/login_hint_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/login_edit_text_password"
@@ -61,36 +60,17 @@
         app:layout_constraintTop_toBottomOf="@+id/login_edit_text_login" />
 
     <Button
-            android:id="@+id/login_button_enter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="8dp"
-            android:text="@string/login_button_enter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/login_edit_text_password"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/text_field_sign_up"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password"
-            android:background="@drawable/round_btn"
-            app:layout_constraintVertical_bias="0.25"/>
-
-    <TextView
-        android:id="@+id/text_field_sign_up"
+        android:id="@+id/login_button_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:gravity="bottom"
-        android:text="@string/login_text_field_sign_up_invite"
-        android:textColor="@color/white"
-        android:textIsSelectable="true"
-        android:textSize="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_btn"
+        android:text="@string/login_button_enter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/login_edit_text_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_edit_text_password"
+        app:layout_constraintVertical_bias="0.25" />
 
     <ProgressBar
             android:visibility="gone"
